@@ -1,0 +1,48 @@
+import 'package:flutter/material.dart';
+import 'package:tarka/model/category_model.dart';
+import 'package:tarka/model/product_model.dart';
+import 'package:tarka/widget/widget.dart';
+
+class CatalogScreen extends StatelessWidget {
+  static const String? routeName = "/catalog";
+
+  static Route route({required Category category}) {
+    return MaterialPageRoute(
+      settings: RouteSettings(name: routeName),
+      builder: (_) => CatalogScreen(category: category),
+    );
+  }
+
+  final Category category;
+  const CatalogScreen({required this.category});
+
+  @override
+  Widget build(BuildContext context) {
+    final List<Product> categoryProducts = Product.products
+        .where((product) => product.category == category.name)
+        .toList();
+
+    return Scaffold(
+        backgroundColor: Colors.grey,
+        appBar: CustomAppBar(title: category.name),
+        bottomNavigationBar: CustomNavBar(
+          screen: '/catalog',
+        ),
+        body: GridView.builder(
+            padding: EdgeInsets.symmetric(
+              horizontal: 8,
+              vertical: 16,
+            ),
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2, childAspectRatio: 1.18),
+            itemCount: categoryProducts.length,
+            itemBuilder: (BuildContext context, int index) {
+              return Center(
+                child: ProducutCard(
+                  product: categoryProducts[index],
+                  widthFactor: 2.2,
+                ),
+              );
+            }));
+  }
+}

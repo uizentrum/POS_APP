@@ -1,0 +1,92 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:tarka/blocks/wishlist/cartbloc/cart_bloc.dart';
+import 'package:tarka/blocks/wishlist/cartbloc/cart_event.dart';
+import 'package:tarka/blocks/wishlist/cartbloc/cart_state.dart';
+import 'package:tarka/model/product_model.dart';
+
+class CartProductCard extends StatelessWidget {
+  final Product product;
+  final int quantity;
+
+  const CartProductCard({
+    Key? key,
+    required this.product,
+    required this.quantity,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 8.0),
+      child: Card(
+        color: Colors.grey,
+        child: Row(
+          children: [
+            Image.asset(
+              product.imageUrl,
+              width: 100,
+              height: 80,
+              fit: BoxFit.cover,
+            ),
+            SizedBox(
+              width: 10,
+            ),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    product.name,
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold),
+                  ),
+                  Text(
+                    "\$${product.price}",
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 12,
+                        fontWeight: FontWeight.bold),
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(
+              width: 10,
+            ),
+            BlocBuilder<CartBloc, CartState>(builder: (context, state) {
+              return Row(
+                children: [
+                  IconButton(
+                    onPressed: () {
+                      context.read<CartBloc>().add(CartProductRemoved(product));
+                    },
+                    icon: Icon(
+                      Icons.remove_circle,
+                      color: Colors.white,
+                    ),
+                  ),
+                  Text("$quantity"),
+                  IconButton(
+                    onPressed: () {
+                      context.read<CartBloc>().add(CartProductAdded(product));
+                    },
+                    icon: Icon(
+                      Icons.add_circle,
+                      color: Colors.white,
+                    ),
+                  ),
+                ],
+              );
+            }),
+          ],
+        ),
+      ),
+    );
+  }
+}

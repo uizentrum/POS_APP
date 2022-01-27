@@ -1,0 +1,13 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.who.pointofsale">
+    <!-- Flutter needs it to communicate with the running application
+         to allow setting breakpoints, to provide hot reload, etc.
+    -->
+    <!-- </application>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permissionn.BLUETOOTH"/>
+    <uses-permission android:name="android.permissionn.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permissionn.ACCess_FINE_LOCATION"/>
+    <uses-permission android:name="android.permissionn.ACCESS_BACKGROUND_LOCATION"/> -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+</manifest>
