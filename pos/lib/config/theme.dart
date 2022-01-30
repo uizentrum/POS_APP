@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 ThemeData theme() {
   return ThemeData(
-    scaffoldBackgroundColor: Colors.grey,
+    scaffoldBackgroundColor: Colors.grey.shade600,
     textTheme: TextTheme(),
   );
 }

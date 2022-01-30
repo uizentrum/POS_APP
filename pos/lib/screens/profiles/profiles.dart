@@ -17,7 +17,7 @@ class Profiles extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey,
+      backgroundColor:Colors.blueGrey.shade800,
       appBar: CustomAppBar(title: "Profiles"),
       bottomNavigationBar: CustomNavBar(screen: routeName),
       body: Column(

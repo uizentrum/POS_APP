@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 class SectionTile extends StatelessWidget {
@@ -9,18 +11,26 @@ class SectionTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(
-        horizontal: 12.0,
-      ),
-      child: Align(
-        alignment: Alignment.topLeft,
-        child: Text(
-          title,
-          style: TextStyle(
-              color: Colors.amber, fontWeight: FontWeight.bold, fontSize: 20),
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Padding(
+          padding: const EdgeInsets.symmetric(
+            horizontal: 12.0,
+          ),
+          child: Align(
+            alignment: Alignment.topLeft,
+            child: Text(
+              title,
+              style: TextStyle(
+                  color: Colors.amber,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 20),
+            ),
+          ),
         ),
-      ),
+        Icon(Icons.arrow_right),
+      ],
     );
   }
 }

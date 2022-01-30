@@ -20,15 +20,15 @@ class CartProductCard extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(bottom: 8.0),
       child: Card(
-        color: Colors.grey,
+        color: Colors.blueGrey,
         child: Row(
           children: [
-            Image.asset(
-              product.imageUrl,
-              width: 100,
-              height: 80,
-              fit: BoxFit.cover,
-            ),
+            // Image.asset(
+            //   product.imaUrl,
+            //   width: 100,
+            //   height: 80,
+            //   fit: BoxFit.cover,
+            // ),
             SizedBox(
               width: 10,
             ),
@@ -38,13 +38,14 @@ class CartProductCard extends StatelessWidget {
                 children: [
                   Text(
                     product.name,
+                    overflow: TextOverflow.ellipsis,
                     style: TextStyle(
                         color: Colors.black,
                         fontSize: 16,
                         fontWeight: FontWeight.bold),
                   ),
                   Text(
-                    "\$${product.price}",
+                    "${product.price}€",
                     style: TextStyle(
                         color: Colors.black,
                         fontSize: 12,
@@ -71,7 +72,10 @@ class CartProductCard extends StatelessWidget {
                       color: Colors.white,
                     ),
                   ),
-                  Text("$quantity"),
+                  Text(
+                    "$quantity",
+                    style: TextStyle(color: Colors.black),
+                  ),
                   IconButton(
                     onPressed: () {
                       context.read<CartBloc>().add(CartProductAdded(product));

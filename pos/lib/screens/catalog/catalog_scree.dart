@@ -23,7 +23,7 @@ class CatalogScreen extends StatelessWidget {
         .toList();
 
     return Scaffold(
-        backgroundColor: Colors.grey,
+        backgroundColor: Colors.blueGrey.shade800,
         appBar: CustomAppBar(title: category.name),
         bottomNavigationBar: CustomNavBar(
           screen: '/catalog',
@@ -34,13 +34,13 @@ class CatalogScreen extends StatelessWidget {
               vertical: 16,
             ),
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 2, childAspectRatio: 1.18),
+                crossAxisCount: 2, childAspectRatio: 2.58),
             itemCount: categoryProducts.length,
             itemBuilder: (BuildContext context, int index) {
               return Center(
                 child: ProducutCard(
                   product: categoryProducts[index],
-                  widthFactor: 2.2,
+                  widthFactor: 2.24,
                 ),
               );
             }));

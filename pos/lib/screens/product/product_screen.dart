@@ -16,7 +16,9 @@ class ProductScreen extends StatelessWidget {
   static Route route({required Product product}) {
     return MaterialPageRoute(
       settings: RouteSettings(name: routeName),
-      builder: (_) => ProductScreen(product: product,),
+      builder: (_) => ProductScreen(
+        product: product,
+      ),
     );
   }
 
@@ -26,7 +28,7 @@ class ProductScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey,
+      backgroundColor: Colors.blueGrey.shade800,
       appBar: CustomAppBar(title: product.name),
       bottomNavigationBar: BottomAppBar(
         color: Color(0xff134b5f),
@@ -135,13 +137,16 @@ class ProductScreen extends StatelessWidget {
                           children: [
                             Text(
                               product.name,
+                              overflow: TextOverflow.ellipsis,
+                              softWrap: false,
                               style: TextStyle(
                                   color: Colors.white,
                                   fontSize: 16,
                                   fontWeight: FontWeight.bold),
                             ),
                             Text(
-                              '\$${product.price}',
+                              '${product.price}€',
+                              overflow: TextOverflow.ellipsis,
                               style: TextStyle(
                                   color: Colors.white,
                                   fontSize: 16,

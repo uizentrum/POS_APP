@@ -15,7 +15,7 @@ class SplashScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     Timer(Duration(seconds: 1), () => Navigator.pushNamed(context, "/"));
     return Scaffold(
-      backgroundColor: Colors.grey,
+      backgroundColor:Colors.blueGrey.shade800,
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [

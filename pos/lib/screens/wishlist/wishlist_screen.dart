@@ -17,7 +17,7 @@ class WishListScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey,
+      backgroundColor:Colors.blueGrey.shade800,
       appBar: CustomAppBar(title: "wishlist"),
       bottomNavigationBar: CustomNavBar(
         screen: '/wishlist',

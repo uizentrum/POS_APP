@@ -76,10 +76,10 @@ class CustomNavBar extends StatelessWidget {
       ),
       IconButton(
         onPressed: () {
-          Navigator.pushNamed(context, "/Profiles");
+          Navigator.pushNamed(context, "/wishlist");
         },
         icon: Icon(
-          Icons.person,
+          Icons.favorite,
           color: Colors.white,
         ),
       ),

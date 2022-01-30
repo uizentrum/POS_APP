@@ -18,46 +18,49 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey,
+      backgroundColor: Colors.blueGrey.shade800,
       appBar: CustomAppBar(
         title: "POS",
       ),
       bottomNavigationBar: CustomNavBar(screen: "/"),
       drawer: Drawer(
-        child: ListView(
-          children: [
-            DrawerHeader(
-                decoration: BoxDecoration(
-                  gradient:
-                      LinearGradient(colors: [Colors.grey, Colors.blueGrey]),
-                ),
-                child: Container(
-                  child: Column(
-                    children: [
-                      Material(
-                        borderRadius: BorderRadius.all(Radius.circular(50)),
-                        child: Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Image.asset(
-                            "images/xtz.jpg",
-                            width: 80,
-                            height: 80,
+        child: Container(
+          color: Colors.blueGrey.shade800,
+          child: ListView(
+            children: [
+              DrawerHeader(
+                  decoration: BoxDecoration(
+                    gradient:
+                        LinearGradient(colors: [Colors.grey, Colors.blueGrey]),
+                  ),
+                  child: Container(
+                    child: Column(
+                      children: [
+                        Material(
+                          borderRadius: BorderRadius.all(Radius.circular(50)),
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Image.asset(
+                              "images/xtz.jpg",
+                              width: 80,
+                              height: 80,
+                            ),
                           ),
                         ),
-                      ),
-                      Text(
-                        "Account",
-                        style: TextStyle(
-                            fontSize: 20, fontWeight: FontWeight.bold),
-                      )
-                    ],
-                  ),
-                )),
-            MyDrawerList(Icons.person, "Profiles", () {}),
-            MyDrawerList(Icons.notifications, "Notifications", () {}),
-            MyDrawerList(Icons.settings, "Settings", () {}),
-            MyDrawerList(Icons.logout, "Logout", () {}),
-          ],
+                        Text(
+                          "Account",
+                          style: TextStyle(
+                              fontSize: 20, fontWeight: FontWeight.bold),
+                        )
+                      ],
+                    ),
+                  )),
+              MyDrawerList(Icons.person, "Profiles", () {}),
+              MyDrawerList(Icons.notifications, "Notifications", () {}),
+              MyDrawerList(Icons.settings, "Settings", () {}),
+              MyDrawerList(Icons.logout, "Logout", () {}),
+            ],
+          ),
         ),
       ),
       body: SingleChildScrollView(
@@ -78,24 +81,24 @@ class HomeScreen extends StatelessWidget {
                     .map((category) => HeroCarosuel(category: category))
                     .toList(),
               ),
-              SectionTile(title: "Recommended"),
+              SectionTile(title: "Vorspeisen"),
               ProductCarousel(
                   products: Product.products
                       .where((product) => product.isRecommended)
                       .toList()),
-              SectionTile(title: "Popular"),
+              SectionTile(title: "Suppen & Salate"),
               ProductCarousel(
                   products: Product.products
                       .where((product) => product.isPopular)
                       .toList()),
-              SectionTile(title: "Drink Category"),
+              SectionTile(title: "Beilagen & Saucen"),
               ProductCarousel(
                   products: Product.products
                       .where(
                         (product) => product.isRecentlyadded,
                       )
                       .toList()),
-              SectionTile(title: "Chicken Category"),
+              SectionTile(title: "Drink & Long Drink"),
               ProductCarousel(
                   products: Product.products
                       .where((product) => product.isDrink)

@@ -1,23 +1,15 @@
 import 'package:flutter/material.dart' hide Image;
 import 'package:esc_pos_bluetooth/esc_pos_bluetooth.dart';
 import 'package:esc_pos_utils/esc_pos_utils.dart';
-import 'package:flutter/services.dart';
-import 'dart:convert';
 import 'package:flutter/foundation.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_bluetooth_basic/flutter_bluetooth_basic.dart';
-import 'package:tarka/blocks/wishlist/cartbloc/cart_bloc.dart';
-import 'package:tarka/blocks/wishlist/cartbloc/cart_state.dart';
 import 'dart:io' show Platform;
 
-import 'package:tarka/widget/cart_productcard.dart';
 
 class Print extends StatefulWidget {
-  final List<dynamic> cartProductCard;
-
-  const Print({
+ 
+  const Print(products,  {
     Key? key,
-    required this.cartProductCard,
   }) : super(key: key);
   @override
   _PrintState createState() => _PrintState();
@@ -53,12 +45,12 @@ class _PrintState extends State<Print> {
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<CartBloc, CartState>(builder: (context, state) {
+    
       return Scaffold(
         appBar: AppBar(
           title: Text('Print'),
           centerTitle: true,
-          backgroundColor: Colors.blueGrey,
+          backgroundColor: Colors.blueGrey.shade800,
         ),
         body: _devices.isEmpty
             ? Center(child: Text(_devicesMsg ?? ""))
@@ -76,7 +68,7 @@ class _PrintState extends State<Print> {
                 },
               ),
       );
-    });
+    
   }
 
   void initPrinter() {
@@ -123,13 +115,13 @@ class _PrintState extends State<Print> {
           styles: PosStyles(bold: true)),
     ]);
 
-    for (var i = 0; i < widget.cartProductCard.length; i++) {
-      ticket.text(widget.cartProductCard[i].name);
-      ticket.row([
-        PosColumn(text: '${widget.cartProductCard[i].price}', width: 6),
-        PosColumn(text: 'Rs ${widget.cartProductCard[i].price}', width: 6),
-      ]);
-    }
+    // for (var i = 0; i < widget.cartProductCard.length; i++) {
+    //   ticket.text(widget.cartProductCard[i].name);
+    //   ticket.row([
+    //     PosColumn(text: '${widget.cartProductCard[i].price}', width: 6),
+    //     PosColumn(text: 'Rs ${widget.cartProductCard[i].price}', width: 6),
+    //   ]);
+    // }
 
     ticket.feed(1);
 
@@ -138,7 +130,7 @@ class _PrintState extends State<Print> {
       PosColumn(text: " Total:", width: 6, styles: PosStyles(bold: true)),
     ]);
 
-    ticket.row([
+      ticket.row([
       PosColumn(
           text: '-------------------------------',
           width: 12,

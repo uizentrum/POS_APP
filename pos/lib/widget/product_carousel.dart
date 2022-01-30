@@ -4,7 +4,7 @@ import 'package:tarka/widget/product_card.dart';
 
 class ProductCarousel extends StatelessWidget {
   final List<Product> products;
-   const ProductCarousel({
+  const ProductCarousel({
     Key? key,
     required this.products,
   }) : super(key: key);
@@ -12,7 +12,7 @@ class ProductCarousel extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 165,
+      height: 90,
       child: ListView.builder(
           physics: const BouncingScrollPhysics(
               parent: AlwaysScrollableScrollPhysics()),

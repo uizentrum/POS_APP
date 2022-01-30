@@ -23,44 +23,40 @@ class ProducutCard extends StatelessWidget {
   Widget build(BuildContext context) {
     final double widthValue = MediaQuery.of(context).size.width / widthFactor;
     return InkWell(
-      // onTap: () {
-      //   // Navigator.pushNamed(
-      //   //   context,
-      //   //   "/product",
-      //   //   arguments: product,
-      //   );
-      // },
+      onTap: () {
+        // Navigator.pushNamed(
+        //   context,
+        //   "/product",
+        //   arguments: product,
+        // );
+      },
       child: Stack(
         children: [
-          Container(
-            width: MediaQuery.of(context).size.width / widthFactor,
-            height: 150,
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(5),
-              child: Image.asset(
-                product.imageUrl,
-                fit: BoxFit.cover,
-              ),
-            ),
-          ),
+          // Container(
+          //   width: MediaQuery.of(context).size.width / widthFactor,
+          //   height: 60,
+          //   // child: ClipRRect(
+          //   //   borderRadius: BorderRadius.circular(5),
+          //   //   child: Image.asset(
+          //   //     product.imageUrl,
+          //   //     fit: BoxFit.cover,
+          //   //   ),
+          //   // ),
+          // ),
           Positioned(
-            top: 80,
-            left: leftPosition,
             child: Container(
-              width: widthValue - 10 - leftPosition,
+              width: widthValue - 5 - leftPosition,
               height: 60,
               alignment: Alignment.bottomCenter,
               decoration: BoxDecoration(
-                color: Colors.black.withAlpha(100),
+                color: Colors.black.withAlpha(50),
               ),
             ),
           ),
           Positioned(
-            top: 85,
-            left: leftPosition + 5,
             child: Container(
-              width: widthValue - 20 - leftPosition,
-              height: 50,
+              width: widthValue - 10 - leftPosition,
+              height: 55,
               alignment: Alignment.bottomCenter,
               decoration: BoxDecoration(
                 color: Colors.black.withAlpha(120),
@@ -77,6 +73,7 @@ class ProducutCard extends StatelessWidget {
                         children: [
                           Text(
                             product.name,
+                            overflow: TextOverflow.ellipsis,
                             style: TextStyle(
                                 color: Colors.white,
                                 fontWeight: FontWeight.bold,
@@ -86,7 +83,7 @@ class ProducutCard extends StatelessWidget {
                             height: 5,
                           ),
                           Text(
-                            '\$${product.price}',
+                            '${product.price}€',
                             style: TextStyle(
                                 color: Colors.white,
                                 fontWeight: FontWeight.bold,
@@ -110,8 +107,11 @@ class ProducutCard extends StatelessWidget {
                                     .add(CartProductAdded(product));
                                 final snackBar = SnackBar(
                                   duration: Duration(seconds: 1),
-                                  backgroundColor: Colors.black,
-                                  content: Text("Product Added"),
+                                  backgroundColor: Colors.amber,
+                                  content: Text(
+                                    "Product Added",
+                                    style: TextStyle(color: Colors.black),
+                                  ),
                                 );
                                 ScaffoldMessenger.of(context)
                                     .showSnackBar(snackBar);

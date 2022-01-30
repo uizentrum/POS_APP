@@ -18,7 +18,7 @@ class CartScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.grey,
+        backgroundColor: Colors.blueGrey.shade800,
         appBar: CustomAppBar(title: "Cart"),
         bottomNavigationBar: BottomAppBar(
           color: Color(0xff134b5f),
@@ -150,7 +150,7 @@ class CartScreen extends StatelessWidget {
                                         fontWeight: FontWeight.bold),
                                   ),
                                   Text(
-                                    "\$${state.cart.subtotolString}",
+                                    "${state.cart.subtotolString}€",
                                     style: TextStyle(
                                         color: Colors.black,
                                         fontSize: 18,
@@ -166,14 +166,14 @@ class CartScreen extends StatelessWidget {
                                     MainAxisAlignment.spaceBetween,
                                 children: [
                                   Text(
-                                    "Tips:-",
+                                    "Tax:-",
                                     style: TextStyle(
                                         color: Colors.black,
                                         fontSize: 18,
                                         fontWeight: FontWeight.bold),
                                   ),
                                   Text(
-                                    "\$${state.cart.netPayableString}",
+                                    "${state.cart.netPayableString}€",
                                     style: TextStyle(
                                         color: Colors.black,
                                         fontSize: 18,
@@ -222,7 +222,7 @@ class CartScreen extends StatelessWidget {
                                           fontWeight: FontWeight.bold),
                                     ),
                                     Text(
-                                      "\$${state.cart.totolString}",
+                                      "${state.cart.totolString}€",
                                       style: TextStyle(
                                           color: Colors.white,
                                           fontSize: 18,
