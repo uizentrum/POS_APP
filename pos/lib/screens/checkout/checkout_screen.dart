@@ -58,7 +58,6 @@ class CheckoutScreen extends StatelessWidget {
                                   print("${index}hello world 2");
 
                                   return CartProductCard(
-                                    
                                     product: state.cart
                                         .productQuantity(state.cart.products)
                                         .keys
@@ -68,8 +67,7 @@ class CheckoutScreen extends StatelessWidget {
                                         .values
                                         .elementAt(index),
                                   );
-                                }
-                                ),
+                                }),
                           ),
                         ),
                         // Divider(
@@ -107,9 +105,7 @@ class CheckoutScreen extends StatelessWidget {
                               color: Colors.green,
                               textColor: Colors.white,
                               child: Text('Print'),
-                              onPressed: ()  
-                              {
-
+                              onPressed: () {
                                 Navigator.push(
                                     context,
                                     MaterialPageRoute(
