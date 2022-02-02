@@ -46,7 +46,7 @@ class ProducutCard extends StatelessWidget {
           Positioned(
             child: Container(
               width: widthValue - 5 - leftPosition,
-              height: 60,
+              height: 55,
               alignment: Alignment.bottomCenter,
               decoration: BoxDecoration(
                 color: Colors.black.withAlpha(50),
