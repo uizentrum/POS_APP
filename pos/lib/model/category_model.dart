@@ -18,15 +18,15 @@ class Category extends Equatable {
   static List<Category> categories = [
     Category(
       name: "MainCourse",
-      imageUrl: "images/main.jpg",
+      imageUrl: "images/maincourse.jpg",
     ),
     Category(
       name: "Apetizer",
-      imageUrl: "images/apetizer.jpg",
+      imageUrl: "images/appetizer.jpg",
     ),
     Category(
       name: "Drinks",
-      imageUrl: "images/drink.jpg",
+      imageUrl: "images/drinks.jpg",
     ),
     Category(
       name: "Salad",
@@ -34,11 +34,35 @@ class Category extends Equatable {
     ),
     Category(
       name: "Vorspeisen",
-      imageUrl: "images/chicken.jpg",
+      imageUrl: "images/Vorspeisen.jpg",
     ),
     Category(
-      name: "Hauptegricht",
-      imageUrl: "images/download.jpg",
+      name: "Hauptegricht Steaks",
+      imageUrl: "images/Hüftsteak.jpg",
+    ),
+    Category(
+      name: "Acompanamientos Beilagen & Saucen",
+      imageUrl: "images/Pfifferlingsauce.jpg",
+    ),
+    Category(
+      name: "Arriba- Spezialitäten",
+      imageUrl: "images/Pechugass.jpg",
+    ),
+    Category(
+      name: "Faitajs",
+      imageUrl: "images/Faitajs.jpg",
+    ),
+    Category(
+      name: "Spezial Burger (125g.)",
+      imageUrl: "images/specialburger.jpg",
+    ),
+    Category(
+      name: "Gigant Burger (227g.)",
+      imageUrl: "images/gigantburger.jpg",
+    ),
+    Category(
+      name: "Pasta",
+      imageUrl: "images/pasta.jpg",
     ),
   ];
 }
