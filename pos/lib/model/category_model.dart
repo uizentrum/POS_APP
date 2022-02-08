@@ -64,5 +64,25 @@ class Category extends Equatable {
       name: "Pasta",
       imageUrl: "images/pasta.jpg",
     ),
+    Category(
+      name: "Pescado-Fischgerichte",
+      imageUrl: "images/fish.jpg",
+    ),
+    Category(
+      name: "Kinder-Menü",
+      imageUrl: "images/kinder.jpg",
+    ),
+    Category(
+      name: "Für den kleinen Hunger",
+      imageUrl: "images/steak.jpg",
+    ),
+    Category(
+      name: "Getränke-Hot Drinks",
+      imageUrl: "images/hotdrinks.jpg",
+    ),
+    Category(
+      name: "Long Drinks",
+      imageUrl: "images/longdrink.jpg",
+    ),
   ];
 }
