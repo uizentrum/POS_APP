@@ -1,4 +1,5 @@
 import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:tarka/blocks/wishlist/cartbloc/cart_bloc.dart';
@@ -105,21 +106,20 @@ class CheckoutScreen extends StatelessWidget {
                               textColor: Colors.white,
                               child: Text('Confirm Order'),
                               onPressed: () {
-                                // print(product.toList());
-                                // CircularProgressIndicator();
-                                // Navigator.pushNamed(context, "/");
-                                print(state.cart.products);
-                                // final snackBar = SnackBar(
-                                //   backgroundColor: Colors.amber,
-                                //   content: Text(
-                                //     "Your Order Confirmed",
-                                //     style: TextStyle(color: Colors.black),
-                                //   ),
-                                // );
-                                // ScaffoldMessenger.of(context)
-                                //     .showSnackBar(snackBar);
+                                CircularProgressIndicator();
+                                Navigator.pushNamed(context, "/");
+                                // print(state.cart.products);
+                                final snackBar = SnackBar(
+                                  backgroundColor: Colors.amber,
+                                  content: Text(
+                                    "Your Order Confirmed",
+                                    style: TextStyle(color: Colors.black),
+                                  ),
+                                );
+                                ScaffoldMessenger.of(context)
+                                    .showSnackBar(snackBar);
                                 // Navigator.push(context,
-                                //     MaterialPageRoute(builder: (_) => Print()));
+                                //     MaterialPageRoute(builder: (_) => Print())));
                               },
                             ),
                           ),
