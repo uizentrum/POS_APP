@@ -5,11 +5,14 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter_bluetooth_basic/flutter_bluetooth_basic.dart';
 import 'dart:io' show Platform;
 
+import 'package:tarka/model/cart_model.dart';
+import 'package:tarka/model/product_model.dart';
 
 class Print extends StatefulWidget {
- 
-  const Print(products,  {
+
+  const Print({
     Key? key,
+  
   }) : super(key: key);
   @override
   _PrintState createState() => _PrintState();
@@ -45,30 +48,28 @@ class _PrintState extends State<Print> {
 
   @override
   Widget build(BuildContext context) {
-    
-      return Scaffold(
-        appBar: AppBar(
-          title: Text('Print'),
-          centerTitle: true,
-          backgroundColor: Colors.blueGrey.shade800,
-        ),
-        body: _devices.isEmpty
-            ? Center(child: Text(_devicesMsg ?? ""))
-            : ListView.builder(
-                itemCount: _devices.length,
-                itemBuilder: (c, i) {
-                  return ListTile(
-                    leading: Icon(Icons.print),
-                    title: Text(_devices[i].name ?? ""),
-                    subtitle: Text(_devices[i].address!),
-                    onTap: () {
-                      _startPrint(_devices[i]);
-                    },
-                  );
-                },
-              ),
-      );
-    
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Print'),
+        centerTitle: true,
+        backgroundColor: Colors.blueGrey.shade800,
+      ),
+      body: _devices.isEmpty
+          ? Center(child: Text(_devicesMsg ?? ""))
+          : ListView.builder(
+              itemCount: _devices.length,
+              itemBuilder: (c, i) {
+                return ListTile(
+                  leading: Icon(Icons.print),
+                  title: Text(_devices[i].name ?? ""),
+                  subtitle: Text(_devices[i].address!),
+                  onTap: () {
+                    _startPrint(_devices[i]);
+                  },
+                );
+              },
+            ),
+    );
   }
 
   void initPrinter() {
@@ -115,7 +116,7 @@ class _PrintState extends State<Print> {
           styles: PosStyles(bold: true)),
     ]);
 
-    // for (var i = 0; i < widget.cartProductCard.length; i++) {
+    // for (var i = 0; i < widget.cart.length; i++) {
     //   ticket.text(widget.cartProductCard[i].name);
     //   ticket.row([
     //     PosColumn(text: '${widget.cartProductCard[i].price}', width: 6),
@@ -130,7 +131,7 @@ class _PrintState extends State<Print> {
       PosColumn(text: " Total:", width: 6, styles: PosStyles(bold: true)),
     ]);
 
-      ticket.row([
+    ticket.row([
       PosColumn(
           text: '-------------------------------',
           width: 12,

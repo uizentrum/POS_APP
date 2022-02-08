@@ -834,5 +834,15 @@ class Product extends Equatable {
       isDrink: false,
       imaUrl: 'images/biryani.jpg',
     ),
+        Product(
+      name: "Lamm Mango",
+      category: "MainCourse",
+      price: 13.90,
+      isPopular: false,
+      isRecommended: true,
+      isRecentlyadded: false,
+      isDrink: false,
+      imaUrl: 'images/biryani.jpg',
+    ),
   ];
 }
