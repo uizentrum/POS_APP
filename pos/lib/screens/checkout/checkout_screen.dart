@@ -106,10 +106,11 @@ class CheckoutScreen extends StatelessWidget {
                               textColor: Colors.white,
                               child: Text('Confirm Order'),
                               onPressed: () {
+                                print(state.cart.products);
                                 CircularProgressIndicator();
                                 Navigator.pushNamed(context, "/");
                                 // print(state.cart.products);
-                                final snackBar = SnackBar(
+                                final snackBar = SnackBar( 
                                   backgroundColor: Colors.amber,
                                   content: Text(
                                     "Your Order Confirmed",
