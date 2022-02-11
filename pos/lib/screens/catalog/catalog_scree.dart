@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:tarka/model/category_model.dart';
 import 'package:tarka/model/product_model.dart';
 import 'package:tarka/widget/widget.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CatalogScreen extends StatelessWidget {
   static const String? routeName = "/catalog";
@@ -30,8 +31,8 @@ class CatalogScreen extends StatelessWidget {
         ),
         body: GridView.builder(
             padding: EdgeInsets.symmetric(
-              horizontal: 8,
-              vertical: 16,
+              horizontal: 8.h,
+              vertical: 16.w,
             ),
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2, childAspectRatio: 2.58),

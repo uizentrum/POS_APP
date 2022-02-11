@@ -1,5 +1,5 @@
 import 'package:equatable/equatable.dart';
-import 'package:get/get_connect/http/src/utils/utils.dart';
+
 
 class Product extends Equatable {
   final String name;

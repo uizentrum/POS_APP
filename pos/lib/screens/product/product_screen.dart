@@ -9,6 +9,7 @@ import 'package:tarka/blocks/wishlist/wishlist_event.dart';
 import 'package:tarka/blocks/wishlist/wishlist_state.dart';
 import 'package:tarka/model/models.dart';
 import 'package:tarka/widget/widget.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ProductScreen extends StatelessWidget {
   static const String? routeName = "/product";
@@ -33,7 +34,7 @@ class ProductScreen extends StatelessWidget {
       bottomNavigationBar: BottomAppBar(
         color: Color(0xff134b5f),
         child: Container(
-          height: 60,
+          height: 60.h,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -65,7 +66,7 @@ class ProductScreen extends StatelessWidget {
                 );
               }),
               Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding:  EdgeInsets.all(8.w),
                 child:
                     BlocBuilder<CartBloc, CartState>(builder: (context, state) {
                   return ElevatedButton(
@@ -82,7 +83,7 @@ class ProductScreen extends StatelessWidget {
                       style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
-                        fontSize: 16,
+                        fontSize: 16.sp,
                       ),
                     ),
                   );

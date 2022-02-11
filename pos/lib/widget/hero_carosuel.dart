@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tarka/model/category_model.dart';
 import 'package:tarka/model/models.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class HeroCarosuel extends StatelessWidget {
   final Category? category;
@@ -25,17 +26,17 @@ class HeroCarosuel extends StatelessWidget {
       },
       child: Container(
         margin: EdgeInsets.symmetric(
-          horizontal: 5.0,
-          vertical: 20.0,
+          horizontal: 5.w,
+          vertical: 20.h,
         ),
         child: ClipRRect(
-            borderRadius: BorderRadius.all(Radius.circular(10.0)),
+            borderRadius: BorderRadius.all(Radius.circular(10.r)),
             child: Stack(
               children: <Widget>[
                 Image.asset(
                   product == null ? category!.imageUrl : product!.imaUrl,
                   fit: BoxFit.cover,
-                  width: 1000.0,
+                  width: 1000.w,
                 ),
                 Positioned(
                   bottom: 0.0,
@@ -53,7 +54,7 @@ class HeroCarosuel extends StatelessWidget {
                       ),
                     ),
                     padding:
-                        EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
+                        EdgeInsets.symmetric(vertical: 10.h, horizontal: 20.w),
                     child: Text(
                         product == null ? category!.name : product!.name,
                         style: Theme.of(context)

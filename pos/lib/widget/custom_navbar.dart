@@ -6,6 +6,7 @@ import 'package:tarka/blocks/wishlist/cartbloc/cart_state.dart';
 import 'package:tarka/blocks/wishlist/wishlist_block.dart';
 import 'package:tarka/blocks/wishlist/wishlist_event.dart';
 import 'package:tarka/blocks/wishlist/wishlist_state.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomNavBar extends StatelessWidget {
   final String screen;
@@ -22,7 +23,7 @@ class CustomNavBar extends StatelessWidget {
     return BottomAppBar(
       color: Color(0xff134b5f),
       child: Container(
-        height: 55,
+        height: 55.h,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -172,15 +173,17 @@ class CustomNavBar extends StatelessWidget {
   List<Widget> _buildOrderNowNavBar(context) {
     return [
       ElevatedButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.pushNamed(context, "/");
+        },
         style: ElevatedButton.styleFrom(
-          primary: Colors.transparent,
           elevation: 0,
+          primary: Color(0xff134b5f),
           shape: RoundedRectangleBorder(),
         ),
         child: Text(
-          "",
-          style: Theme.of(context).textTheme.headline4,
+          "Go To Home",
+          style: TextStyle(fontSize: 15, color: Colors.black),
         ),
       ),
     ];

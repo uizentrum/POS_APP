@@ -1,5 +1,4 @@
 import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:tarka/blocks/wishlist/cartbloc/cart_bloc.dart';
@@ -10,6 +9,7 @@ import 'package:tarka/screens/print/print.dart';
 import 'package:tarka/widget/cart_productcard.dart';
 import 'package:tarka/widget/custom_appbar.dart';
 import 'package:tarka/widget/custom_navbar.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CheckoutScreen extends StatelessWidget {
   static const String routeName = "/checkout";
@@ -36,8 +36,7 @@ class CheckoutScreen extends StatelessWidget {
             }
             if (state is CartLoaded) {
               return Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 10.h),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -48,7 +47,7 @@ class CheckoutScreen extends StatelessWidget {
                         ),
                         SingleChildScrollView(
                           child: SizedBox(
-                            height: 480,
+                            height: 430.h,
                             child: ListView.builder(
                                 itemCount: state.cart
                                     .productQuantity(state.cart.products)
@@ -74,56 +73,57 @@ class CheckoutScreen extends StatelessWidget {
                       ],
                     ),
                     Container(
-                      height: 60,
+                      decoration: BoxDecoration(
+                          color: Colors.blueGrey,
+                          borderRadius: BorderRadius.circular(5.r)),
+                      height: 60.h,
                       width: double.infinity,
-                      color: Colors.blueGrey,
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: <Widget>[
                           Wrap(
                             children: <Widget>[
-                              SizedBox(width: 20),
+                              SizedBox(width: 20.w),
                               Text(
                                 'Total :',
                                 style: TextStyle(
                                   fontWeight: FontWeight.bold,
-                                  fontSize: 18,
+                                  fontSize: 18.sp,
                                 ),
                               ),
                               Text(
                                 "${state.cart.totolString}€",
                                 style: TextStyle(
                                     color: Colors.black,
-                                    fontSize: 18,
+                                    fontSize: 18.sp,
                                     fontWeight: FontWeight.bold),
                               )
                             ],
                           ),
-                          SizedBox(width: 20),
+                          SizedBox(width: 20.w),
                           Expanded(
                             child: FlatButton(
                               color: Colors.green,
                               textColor: Colors.white,
-                              child: Text('Confirm Order'),
+                              child: Text('Print'),
                               onPressed: () {
-                                CircularProgressIndicator();
-                                Navigator.pushNamed(context, "/");
-                                // print(state.cart.products);
-                                final snackBar = SnackBar(
-                                  backgroundColor: Colors.amber,
-                                  content: Text(
-                                    "Your Order Confirmed",
-                                    style: TextStyle(color: Colors.black),
-                                  ),
-                                );
-                                ScaffoldMessenger.of(context)
-                                    .showSnackBar(snackBar);
-                                // Navigator.push(context,
-                                //     MaterialPageRoute(builder: (_) => Print())));
+                                // print(state);
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute<CartState>(
+                                        builder: (_) => Print(
+                                              product: state.cart.products.last,
+                                              // .productQuantity(state.cart.products)
+                                              // .keys
+                                              // .elementAt(index),
+
+                                              quantity:
+                                                  state.cart.products.length,
+                                            )));
                               },
                             ),
                           ),
-                          SizedBox(width: 20),
+                          SizedBox(width: 20.w),
                         ],
                       ),
                     ),

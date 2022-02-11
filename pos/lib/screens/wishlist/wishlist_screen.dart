@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:tarka/blocks/wishlist/wishlist_block.dart';
 import 'package:tarka/blocks/wishlist/wishlist_state.dart';
 import 'package:tarka/widget/widget.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class WishListScreen extends StatelessWidget {
   static const String? routeName = "/wishlist";
@@ -32,8 +33,8 @@ class WishListScreen extends StatelessWidget {
           if (state is WishlistLoadwd) {
             return GridView.builder(
               padding: EdgeInsets.symmetric(
-                horizontal: 8,
-                vertical: 16,
+                horizontal: 8.w,
+                vertical: 16.h,
               ),
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 1, childAspectRatio: 2.4),

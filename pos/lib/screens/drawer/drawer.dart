@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class MyDrawerList extends StatelessWidget {
   IconData icon;
@@ -9,7 +10,7 @@ class MyDrawerList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 8, right: 8),
+      padding:  EdgeInsets.only(left: 8.w, right: 8.w),
       child: Container(
         decoration: BoxDecoration(
           border: Border(
@@ -20,7 +21,7 @@ class MyDrawerList extends StatelessWidget {
           splashColor: Colors.blueGrey,
           onTap: () {},
           child: Container(
-            height: 50,
+            height: 50.h,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -28,11 +29,11 @@ class MyDrawerList extends StatelessWidget {
                   children: [
                     Icon(icon),
                     Padding(
-                      padding: const EdgeInsets.all(8.0),
+                      padding: EdgeInsets.all(8.w),
                       child: Text(
                         text,
                         style: TextStyle(
-                            fontSize: 16, fontWeight: FontWeight.bold),
+                            fontSize: 16.sp, fontWeight: FontWeight.bold),
                       ),
                     ),
                   ],

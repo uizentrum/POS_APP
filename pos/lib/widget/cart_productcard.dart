@@ -4,6 +4,7 @@ import 'package:tarka/blocks/wishlist/cartbloc/cart_bloc.dart';
 import 'package:tarka/blocks/wishlist/cartbloc/cart_event.dart';
 import 'package:tarka/blocks/wishlist/cartbloc/cart_state.dart';
 import 'package:tarka/model/product_model.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CartProductCard extends StatelessWidget {
   final Product product;
@@ -18,8 +19,10 @@ class CartProductCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(bottom: 8.0),
+      padding: EdgeInsets.only(bottom: 8.w),
       child: Card(
+        shadowColor: Colors.black,
+        elevation: 5,
         color: Colors.blueGrey,
         child: Row(
           children: [
@@ -30,7 +33,7 @@ class CartProductCard extends StatelessWidget {
             //   fit: BoxFit.cover,
             // ),
             SizedBox(
-              width: 10,
+              width: 10.w,
             ),
             Expanded(
               child: Column(
@@ -41,24 +44,24 @@ class CartProductCard extends StatelessWidget {
                     overflow: TextOverflow.ellipsis,
                     style: TextStyle(
                         color: Colors.black,
-                        fontSize: 16,
+                        fontSize: 16.sp,
                         fontWeight: FontWeight.bold),
                   ),
                   Text(
                     "${product.price}€",
                     style: TextStyle(
                         color: Colors.black,
-                        fontSize: 12,
+                        fontSize: 12.sp,
                         fontWeight: FontWeight.bold),
                   ),
                   SizedBox(
-                    width: 10,
+                    width: 10.w,
                   ),
                 ],
               ),
             ),
             SizedBox(
-              width: 10,
+              width: 10.w,
             ),
             BlocBuilder<CartBloc, CartState>(builder: (context, state) {
               return Row(

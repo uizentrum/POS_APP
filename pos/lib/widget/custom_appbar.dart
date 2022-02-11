@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomAppBar extends StatelessWidget with PreferredSizeWidget {
   final String title;
@@ -18,7 +19,7 @@ class CustomAppBar extends StatelessWidget with PreferredSizeWidget {
           color: Colors.transparent,
           child: Padding(
             padding:
-                const EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
+               EdgeInsets.symmetric(vertical: 10.h, horizontal: 10.w),
             child: Text(
               title,
               style: Theme.of(context)
@@ -42,5 +43,5 @@ class CustomAppBar extends StatelessWidget with PreferredSizeWidget {
   }
 
   @override
-  Size get preferredSize => Size.fromHeight(58.0);
+  Size get preferredSize => Size.fromHeight(58.h);
 }

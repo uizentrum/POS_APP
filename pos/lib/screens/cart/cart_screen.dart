@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:tarka/blocks/wishlist/cartbloc/cart_bloc.dart';
 import 'package:tarka/blocks/wishlist/cartbloc/cart_state.dart';
 import 'package:tarka/widget/cart_productcard.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:tarka/widget/widget.dart';
 
 class CartScreen extends StatelessWidget {
@@ -23,7 +24,7 @@ class CartScreen extends StatelessWidget {
         bottomNavigationBar: BottomAppBar(
           color: Color(0xff134b5f),
           child: Container(
-            height: 55,
+            height: 55.h,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
@@ -42,7 +43,7 @@ class CartScreen extends StatelessWidget {
                       style: TextStyle(
                         color: Colors.black,
                         fontWeight: FontWeight.bold,
-                        fontSize: 16,
+                        fontSize: 16.sp,
                       ),
                     ),
                   ),
@@ -60,8 +61,7 @@ class CartScreen extends StatelessWidget {
             }
             if (state is CartLoaded) {
               return Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 10.h),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -89,7 +89,7 @@ class CartScreen extends StatelessWidget {
                                 "Add More Item",
                                 style: TextStyle(
                                     color: Colors.white,
-                                    fontSize: 14,
+                                    fontSize: 14.sp,
                                     fontWeight: FontWeight.bold),
                               ),
                             ),
@@ -103,7 +103,7 @@ class CartScreen extends StatelessWidget {
                         ),
                         SingleChildScrollView(
                           child: SizedBox(
-                            height: 480,
+                            height: 430.h,
                             child: ListView.builder(
                                 itemCount: state.cart
                                     .productQuantity(state.cart.products)
@@ -134,8 +134,8 @@ class CartScreen extends StatelessWidget {
                           thickness: 2,
                         ),
                         Padding(
-                          padding: const EdgeInsets.symmetric(
-                              horizontal: 40.0, vertical: 10.0),
+                          padding: EdgeInsets.symmetric(
+                              horizontal: 40.w, vertical: 10.h),
                           child: Column(
                             children: [
                               Row(
@@ -146,20 +146,20 @@ class CartScreen extends StatelessWidget {
                                     "Sub Total:-",
                                     style: TextStyle(
                                         color: Colors.black,
-                                        fontSize: 18,
+                                        fontSize: 18.sp,
                                         fontWeight: FontWeight.bold),
                                   ),
                                   Text(
                                     "${state.cart.subtotolString}€",
                                     style: TextStyle(
                                         color: Colors.black,
-                                        fontSize: 18,
+                                        fontSize: 18.sp,
                                         fontWeight: FontWeight.bold),
                                   ),
                                 ],
                               ),
                               SizedBox(
-                                height: 10,
+                                height: 10.h,
                               ),
                               Row(
                                 mainAxisAlignment:
@@ -169,14 +169,14 @@ class CartScreen extends StatelessWidget {
                                     "Tax:-",
                                     style: TextStyle(
                                         color: Colors.black,
-                                        fontSize: 18,
+                                        fontSize: 18.sp,
                                         fontWeight: FontWeight.bold),
                                   ),
                                   Text(
                                     "${state.cart.netPayableString}€",
                                     style: TextStyle(
                                         color: Colors.black,
-                                        fontSize: 18,
+                                        fontSize: 18.sp,
                                         fontWeight: FontWeight.bold),
                                   ),
                                 ],
@@ -186,49 +186,53 @@ class CartScreen extends StatelessWidget {
                         ),
                         Stack(
                           children: [
-                            Positioned(
-                              top: 0,
-                              left: 0,
-                              right: 0,
-                              bottom: 0,
-                              child: Container(
-                                width: MediaQuery.of(context).size.width,
-                                height: 60,
-                                decoration: BoxDecoration(
-                                  color: Colors.black.withAlpha(150),
+                            Expanded(
+                              child: Positioned(
+                                top: 0,
+                                left: 0,
+                                right: 0,
+                                bottom: 0,
+                                child: Container(
+                                  width: MediaQuery.of(context).size.width,
+                                  height: 60.h,
+                                  decoration: BoxDecoration(
+                                    color: Colors.black.withAlpha(150),
+                                  ),
                                 ),
                               ),
                             ),
-                            Container(
-                              width: MediaQuery.of(context).size.width,
-                              margin: EdgeInsets.all(5.0),
-                              height: 50,
-                              decoration: BoxDecoration(
-                                color: Colors.black,
-                              ),
-                              child: Padding(
-                                padding: const EdgeInsets.symmetric(
-                                  horizontal: 30,
+                            Expanded(
+                              child: Container(
+                                width: MediaQuery.of(context).size.width,
+                                margin: EdgeInsets.all(5.w),
+                                height: 50.h,
+                                decoration: BoxDecoration(
+                                  color: Colors.black,
                                 ),
-                                child: Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    Text(
-                                      "Total:-",
-                                      style: TextStyle(
-                                          color: Colors.white,
-                                          fontSize: 18,
-                                          fontWeight: FontWeight.bold),
-                                    ),
-                                    Text(
-                                      "${state.cart.totolString}€",
-                                      style: TextStyle(
-                                          color: Colors.white,
-                                          fontSize: 18,
-                                          fontWeight: FontWeight.bold),
-                                    ),
-                                  ],
+                                child: Padding(
+                                  padding: EdgeInsets.symmetric(
+                                    horizontal: 30.w,
+                                  ),
+                                  child: Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Text(
+                                        "Total:-",
+                                        style: TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 18.sp,
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                      Text(
+                                        "${state.cart.totolString}€",
+                                        style: TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 18.sp,
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                    ],
+                                  ),
                                 ),
                               ),
                             ),

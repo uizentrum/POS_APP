@@ -1,6 +1,5 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class SectionTile extends StatelessWidget {
   final String title;
@@ -15,8 +14,8 @@ class SectionTile extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Padding(
-          padding: const EdgeInsets.symmetric(
-            horizontal: 12.0,
+          padding: EdgeInsets.symmetric(
+            horizontal: 12.w,
           ),
           child: Align(
             alignment: Alignment.topLeft,
@@ -25,7 +24,7 @@ class SectionTile extends StatelessWidget {
               style: TextStyle(
                   color: Colors.amber,
                   fontWeight: FontWeight.bold,
-                  fontSize: 20),
+                  fontSize: 20.sp),
             ),
           ),
         ),

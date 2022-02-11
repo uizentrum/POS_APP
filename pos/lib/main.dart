@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:tarka/blocks/wishlist/cartbloc/cart_event.dart';
 import 'package:tarka/blocks/wishlist/wishlist_block.dart';
 import 'package:tarka/blocks/wishlist/wishlist_event.dart';
@@ -24,12 +25,15 @@ class MyApp extends StatelessWidget {
         BlocProvider(create: (_) => CartBloc()..add(CartStarted())),
         BlocProvider(create: (_) => WishlistBloc()..add(StarWishlist())),
       ],
-      child: MaterialApp(
-        debugShowCheckedModeBanner: false,
-        title: 'POS',
-        theme: theme(),
-        onGenerateRoute: AppRouter.onGenerateRoute,
-        initialRoute: HomeScreen.routeName,
+      child: ScreenUtilInit(
+        builder: () => MaterialApp(
+          debugShowCheckedModeBanner: false,
+          title: 'POS',
+          theme: theme(),
+          onGenerateRoute: AppRouter.onGenerateRoute,
+          initialRoute: HomeScreen.routeName,
+        ),
+        designSize: Size(411, 866),
       ),
     );
   }

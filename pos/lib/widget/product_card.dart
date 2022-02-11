@@ -4,6 +4,7 @@ import 'package:tarka/blocks/wishlist/cartbloc/cart_bloc.dart';
 import 'package:tarka/blocks/wishlist/cartbloc/cart_event.dart';
 import 'package:tarka/blocks/wishlist/cartbloc/cart_state.dart';
 import 'package:tarka/model/product_model.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ProducutCard extends StatelessWidget {
   final Product product;
@@ -14,7 +15,7 @@ class ProducutCard extends StatelessWidget {
   const ProducutCard({
     Key? key,
     required this.product,
-    this.widthFactor = 2.5,
+    this.widthFactor = 2.0,
     this.leftPosition = 5,
     this.isWishlist = false,
   }) : super(key: key);
@@ -42,11 +43,11 @@ class ProducutCard extends StatelessWidget {
           //   //     fit: BoxFit.cover,
           //   //   ),
           //   // ),
-          // ),
+          // )
           Positioned(
             child: Container(
-              width: widthValue - 5 - leftPosition,
-              height: 55,
+              width: widthValue - 5.w - leftPosition,
+              height: 58.h,
               alignment: Alignment.bottomCenter,
               decoration: BoxDecoration(
                 color: Colors.black.withAlpha(50),
@@ -55,14 +56,15 @@ class ProducutCard extends StatelessWidget {
           ),
           Positioned(
             child: Container(
-              width: widthValue - 10 - leftPosition,
-              height: 55,
+              width: widthValue - 10.w - leftPosition,
+              height: 55.h,
               alignment: Alignment.bottomCenter,
               decoration: BoxDecoration(
                 color: Colors.black.withAlpha(120),
               ),
               child: Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding:
+                    EdgeInsets.only(bottom: 0, top: 5.h, left: 5.w, right: 5.w),
                 child: Row(
                   children: [
                     Expanded(
@@ -77,17 +79,17 @@ class ProducutCard extends StatelessWidget {
                             style: TextStyle(
                                 color: Colors.white,
                                 fontWeight: FontWeight.bold,
-                                fontSize: 12),
+                                fontSize: 12.sp),
                           ),
                           SizedBox(
-                            height: 5,
+                            height: 5.h,
                           ),
                           Text(
                             '${product.price}€',
                             style: TextStyle(
                                 color: Colors.white,
                                 fontWeight: FontWeight.bold,
-                                fontSize: 12),
+                                fontSize: 12.sp),
                           ),
                         ],
                       ),

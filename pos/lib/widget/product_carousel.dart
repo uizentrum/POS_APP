@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tarka/model/product_model.dart';
 import 'package:tarka/widget/product_card.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ProductCarousel extends StatelessWidget {
   final List<Product> products;
@@ -12,16 +13,15 @@ class ProductCarousel extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 90,
+      height: 90.h,
       child: ListView.builder(
-          physics: const BouncingScrollPhysics(
-              parent: AlwaysScrollableScrollPhysics()),
-          padding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 5.0),
+          physics:BouncingScrollPhysics(parent: BouncingScrollPhysics()),
+          padding: EdgeInsets.symmetric(horizontal: 10.w, vertical: 5.h,),
           scrollDirection: Axis.horizontal,
           itemCount: products.length,
-          itemBuilder: (context, index) {
+          itemBuilder: (context, index){
             return Padding(
-              padding: const EdgeInsets.only(right: 5.0),
+              padding: EdgeInsets.only(right: 5.w,),
               child: ProducutCard(
                 product: products[index],
               ),

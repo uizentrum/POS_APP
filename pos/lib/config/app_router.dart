@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:tarka/model/cart_model.dart';
 import 'package:tarka/model/category_model.dart';
 import 'package:tarka/model/product_model.dart';
 import 'package:tarka/screens/home/home_screen.dart';

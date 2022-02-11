@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class SplashScreen extends StatelessWidget {
   static const String routeName = "/splash";
@@ -23,8 +24,8 @@ class SplashScreen extends StatelessWidget {
             child: ClipRRect(
               child: Image(
                 image: AssetImage("assets/main.jpg"),
-                width: 300,
-                height: 300,
+                width: 300.w,
+                height: 300.h,
               ),
             ),
           ),
@@ -32,14 +33,14 @@ class SplashScreen extends StatelessWidget {
             height: 10,
           ),
           Container(
-            height: 40,
-            width: 100,
+            height: 40.h,
+            width: 100.w,
             color: Colors.black,
             child: Text(
               "Welcome",
               style: TextStyle(
                   color: Colors.white,
-                  fontSize: 22,
+                  fontSize: 22.sp,
                   fontWeight: FontWeight.bold),
             ),
           ),
