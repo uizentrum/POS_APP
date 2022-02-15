@@ -21,6 +21,7 @@ class CustomNavBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BottomAppBar(
+      elevation: 8,
       color: Color(0xff134b5f),
       child: Container(
         height: 55.h,
@@ -47,8 +48,8 @@ class CustomNavBar extends StatelessWidget {
         return _buildGoToCheckoutNavBar(context);
       case "/checkout":
         return _buildOrderNowNavBar(context);
-      case "/Profiles":
-        return _buildNavBar(context);
+      case "/print":
+        return _buildPrintNavBar(context);
 
       default:
         _buildNavBar(context);
@@ -57,32 +58,80 @@ class CustomNavBar extends StatelessWidget {
 
   List<Widget> _buildNavBar(context) {
     return [
-      IconButton(
-        onPressed: () {
-          Navigator.pushNamed(context, "/");
-        },
-        icon: Icon(
-          Icons.home,
-          color: Colors.white,
-        ),
-      ),
-      IconButton(
-        onPressed: () {
-          Navigator.pushNamed(context, "/cart");
-        },
-        icon: Icon(
-          Icons.shopping_cart,
-          color: Colors.white,
-        ),
-      ),
-      IconButton(
-        onPressed: () {
-          Navigator.pushNamed(context, "/wishlist");
-        },
-        icon: Icon(
-          Icons.favorite,
-          color: Colors.white,
-        ),
+      Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              FlatButton(
+                onPressed: () => {
+                  Navigator.pushNamed(context, "/"),
+                },
+                padding: EdgeInsets.all(5.0),
+                child: Column(
+                  children: <Widget>[
+                    Icon(
+                      Icons.home,
+                      color: Colors.amber,
+                    ),
+                    Text(
+                      "Home",
+                      style: TextStyle(color: Colors.white),
+                    )
+                  ],
+                ),
+              ),
+            ],
+          ),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              FlatButton(
+                onPressed: () => {
+                  Navigator.pushNamed(context, "/cart"),
+                },
+                padding: EdgeInsets.all(5.0),
+                child: Column(
+                  children: <Widget>[
+                    Icon(
+                      Icons.shopping_cart_outlined,
+                      color: Colors.amber,
+                    ),
+                    Text(
+                      "Cart",
+                      style: TextStyle(color: Colors.white),
+                    )
+                  ],
+                ),
+              ),
+            ],
+          ),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              FlatButton(
+                onPressed: () => {
+                  Navigator.pushNamed(context, "/wishlist"),
+                },
+                padding: EdgeInsets.all(5.0),
+                child: Column(
+                  children: <Widget>[
+                    Icon(
+                      Icons.favorite,
+                      color: Colors.amber,
+                    ),
+                    Text(
+                      "favorite",
+                      style: TextStyle(color: Colors.white),
+                    )
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ],
       ),
     ];
   }
@@ -159,6 +208,7 @@ class CustomNavBar extends StatelessWidget {
           Navigator.pushNamed(context, "/checkout");
         },
         style: ElevatedButton.styleFrom(
+          elevation: 8,
           primary: Colors.white,
           shape: RoundedRectangleBorder(),
         ),
@@ -177,12 +227,31 @@ class CustomNavBar extends StatelessWidget {
           Navigator.pushNamed(context, "/");
         },
         style: ElevatedButton.styleFrom(
-          elevation: 0,
-          primary: Color(0xff134b5f),
+          elevation: 8,
+          primary: Colors.blueGrey,
           shape: RoundedRectangleBorder(),
         ),
         child: Text(
-          "Go To Home",
+          "Go Back!",
+          style: TextStyle(fontSize: 15, color: Colors.black),
+        ),
+      ),
+    ];
+  }
+
+  List<Widget> _buildPrintNavBar(context) {
+    return [
+      ElevatedButton(
+        onPressed: () {
+          Navigator.pushNamed(context, "/");
+        },
+        style: ElevatedButton.styleFrom(
+          elevation: 8,
+          primary: Colors.blueGrey,
+          shape: RoundedRectangleBorder(),
+        ),
+        child: Text(
+          "Go Back!",
           style: TextStyle(fontSize: 15, color: Colors.black),
         ),
       ),

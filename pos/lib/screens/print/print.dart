@@ -6,13 +6,19 @@ import 'package:flutter_bluetooth_basic/flutter_bluetooth_basic.dart';
 import 'dart:io' show Platform;
 import 'package:tarka/model/cart_model.dart';
 import 'package:tarka/model/product_model.dart';
+import 'package:tarka/widget/custom_appbar.dart';
+import 'package:tarka/widget/custom_navbar.dart';
 
 class Print extends StatefulWidget {
-  final Product product;
-  final int quantity;
+  static const String? routeName = "/print";
 
-  const Print({Key? key, required this.product, required this.quantity})
-      : super(key: key);
+  static Route route({required Product product}) {
+    return MaterialPageRoute(
+      settings: RouteSettings(name: routeName),
+      builder: (_) => Print(),
+    );
+  }
+
 
   @override
   _PrintState createState() => _PrintState();
@@ -50,10 +56,16 @@ class _PrintState extends State<Print> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.blueGrey.shade800,
       appBar: AppBar(
-        title: Text('Print'),
+        title: Text(
+          "Print",
+          style: TextStyle(color: Colors.amber),
+        ),
         centerTitle: true,
-        backgroundColor: Colors.blueGrey.shade800,
+        // elevation: 8,
+        shadowColor: Colors.black,
+        backgroundColor: Colors.blueGrey,
       ),
       body: _devices.isEmpty
           ? Center(child: Text(_devicesMsg ?? ""))
@@ -70,6 +82,7 @@ class _PrintState extends State<Print> {
                 );
               },
             ),
+      bottomNavigationBar: CustomNavBar(screen: "/print"),
     );
   }
 
@@ -117,19 +130,23 @@ class _PrintState extends State<Print> {
           styles: PosStyles(bold: true)),
     ]);
 
-    for (var i = 0; i < widget.product.price; i++) {
-      ticket.text(widget.product.name);
-      ticket.row([
-        PosColumn(text: '${widget.product.price}', width: 6),
-        PosColumn(text: 'Rs ${widget.product.price}', width: 6),
-      ]);
-    }
+    // for (var i = 0; i < widget.products.length; i++) {
+    //   ticket.text(widget.products[i].name);
+    //   ticket.row([
+    //     PosColumn(text: '${widget.products[i].price}€', width: 6),
+    //     PosColumn(text: '${widget.products[i].name}€', width: 6),
+    //   ]);
+    // }
 
     ticket.feed(1);
 
     ticket.row([
       PosColumn(text: 'Total', width: 6, styles: PosStyles(bold: true)),
-      PosColumn(text: " Total:", width: 6, styles: PosStyles(bold: true)),
+      PosColumn(
+          // text:  "${widget.products.price}€",
+          // text: "${widget.product.price.toString()}",
+          width: 6,
+          styles: PosStyles(bold: true)),
     ]);
 
     ticket.row([

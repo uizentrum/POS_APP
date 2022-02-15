@@ -14,7 +14,7 @@ class SplashScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Timer(Duration(seconds: 1), () => Navigator.pushNamed(context, "/"));
+    Timer(Duration(seconds: 2), () => Navigator.pushNamed(context, "/"));
     return Scaffold(
       backgroundColor:Colors.blueGrey.shade800,
       body: Column(
@@ -23,9 +23,9 @@ class SplashScreen extends StatelessWidget {
           Center(
             child: ClipRRect(
               child: Image(
+                fit: BoxFit.cover,
                 image: AssetImage("assets/main.jpg"),
-                width: 300.w,
-                height: 300.h,
+              
               ),
             ),
           ),
@@ -33,6 +33,9 @@ class SplashScreen extends StatelessWidget {
             height: 10,
           ),
           Container(
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(5),
+            ),
             height: 40.h,
             width: 100.w,
             color: Colors.black,

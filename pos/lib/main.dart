@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -11,6 +12,7 @@ import 'package:tarka/screens/home/home_screen.dart';
 import 'blocks/wishlist/cartbloc/cart_bloc.dart';
 
 void main() {
+  RenderErrorBox.backgroundColor = Colors.amber;
   runApp(MyApp());
 }
 
@@ -18,7 +20,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-      statusBarColor: Colors.transparent,
+      statusBarColor: Colors.blueGrey.shade600,
     ));
     return MultiBlocProvider(
       providers: [
@@ -38,3 +40,4 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+ 

@@ -1,11 +1,10 @@
 import 'package:equatable/equatable.dart';
 
-
 class Product extends Equatable {
   final String name;
   final String category;
   final double price;
-  final String imaUrl;
+  final String? imaUrl;
   final bool isRecommended;
   final bool isPopular;
   final bool isRecentlyadded;
@@ -15,7 +14,7 @@ class Product extends Equatable {
     required this.name,
     required this.category,
     required this.price,
-    required this.imaUrl,
+    this.imaUrl,
     required this.isRecommended,
     required this.isPopular,
     required this.isRecentlyadded,
@@ -42,7 +41,7 @@ class Product extends Equatable {
       isRecommended: true,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/OIP.jpg',
+      // imaUrl: 'images/OIP.jpg',
     ),
     Product(
       name: "Onionringe",
@@ -52,7 +51,6 @@ class Product extends Equatable {
       isRecommended: true,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/apet.jpg',
     ),
     Product(
       name: "Chip con tres salas",
@@ -62,7 +60,6 @@ class Product extends Equatable {
       isRecommended: true,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/drink.jpg',
     ),
     Product(
       name: "Nachos Arriba",
@@ -72,7 +69,6 @@ class Product extends Equatable {
       isRecommended: true,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Nachos Mexicana",
@@ -92,7 +88,6 @@ class Product extends Equatable {
       isRecommended: true,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/apet.jpg',
     ),
     Product(
       name: "Nachos con picadillo",
@@ -102,7 +97,6 @@ class Product extends Equatable {
       isRecommended: true,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/drink.jpg',
     ),
     Product(
       name: "Chilli chese Nuggets",
@@ -112,7 +106,6 @@ class Product extends Equatable {
       isRecommended: true,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Peppers Red Hot",
@@ -132,7 +125,6 @@ class Product extends Equatable {
       isRecommended: true,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/apet.jpg',
     ),
     Product(
       name: "Mozzarella- Sticks",
@@ -142,7 +134,6 @@ class Product extends Equatable {
       isRecommended: true,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/drink.jpg',
     ),
     Product(
       name: "Peppers-Cheddar",
@@ -152,7 +143,6 @@ class Product extends Equatable {
       isRecommended: true,
       isRecentlyadded: true,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Scampi vom Grill",
@@ -172,7 +162,6 @@ class Product extends Equatable {
       isRecommended: true,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/apet.jpg',
     ),
     Product(
       name: "Peppers Habaneros",
@@ -182,7 +171,6 @@ class Product extends Equatable {
       isRecommended: true,
       isRecentlyadded: true,
       isDrink: false,
-      imaUrl: 'images/drink.jpg',
     ),
     Product(
       name: "Mythra Teller",
@@ -192,7 +180,6 @@ class Product extends Equatable {
       isRecommended: true,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Cream de Elote",
@@ -212,7 +199,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/apet.jpg',
     ),
     Product(
       name: "Chilli con Carne",
@@ -222,7 +208,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/drink.jpg',
     ),
     Product(
       name: "El Goucho suppe",
@@ -232,7 +217,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Quesadillas Vegetariana",
@@ -242,7 +226,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Quesadillas con pollo",
@@ -252,7 +235,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Quesadillas con picadillo",
@@ -262,7 +244,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Quesadillas can Spinaci",
@@ -272,7 +253,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Quesadillas de Hongos",
@@ -282,7 +262,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Quesadillas arriba Mexico",
@@ -292,7 +271,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Ensalada Mixta",
@@ -302,7 +280,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Ensalada de Queso",
@@ -312,7 +289,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Ensalada de Atun",
@@ -322,7 +298,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Ensalada de Nopales",
@@ -332,7 +307,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Ensalada arriba Mexico",
@@ -342,7 +316,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Ensalada Ranchero",
@@ -352,7 +325,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Ensalada Australia",
@@ -362,7 +334,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "pfifferlingsauce",
@@ -372,7 +343,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: true,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Champignonsauce",
@@ -382,7 +352,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: true,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Grun Pfeffersauce",
@@ -392,7 +361,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: true,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Gorgonzolasauce",
@@ -402,7 +370,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: true,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Avacadocream",
@@ -412,7 +379,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: true,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Sauerrahm",
@@ -422,7 +388,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: true,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Salsa Raja",
@@ -432,7 +397,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: true,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Jalapenos",
@@ -442,7 +406,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: true,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Likore Amaretto ",
@@ -452,7 +415,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: true,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Baileys",
@@ -462,7 +424,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: true,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Southern Comfort",
@@ -472,7 +433,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: true,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Sambuca",
@@ -482,7 +442,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: true,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Batida de Coco",
@@ -492,7 +451,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: true,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Kahlua",
@@ -502,7 +460,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: true,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Osborne Veterano",
@@ -512,7 +469,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: true,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Asbach Uralt",
@@ -522,7 +478,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: true,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Jacobi 1860 V.S.O.P",
@@ -532,7 +487,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: true,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Cardenal Mendoza",
@@ -542,7 +496,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: true,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Carlos 1",
@@ -552,7 +505,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: true,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Remy Martin V.S.O.P.",
@@ -562,7 +514,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: true,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Metaxa ****",
@@ -572,7 +523,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: true,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Calvados Papidoux",
@@ -582,7 +532,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: true,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Olmeca Tequila Blanco",
@@ -592,7 +541,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: true,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Olmeca Tequila Reposado",
@@ -602,7 +550,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: true,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Sierra Tequila Silver",
@@ -612,7 +559,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: true,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Sierra Tequila Reposado",
@@ -622,7 +568,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: true,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Sierra Tequila Antiguo",
@@ -632,7 +577,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: true,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Sierra Tequila Plata",
@@ -642,7 +586,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: true,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Sierra Tequila Milinario Extra Añejo",
@@ -652,7 +595,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: true,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "EL Jimador Blanco",
@@ -662,7 +604,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: true,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "EL Jimador Reposado",
@@ -672,7 +613,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: true,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Fürst Bismarck",
@@ -682,7 +622,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: true,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Grappa",
@@ -692,7 +631,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: true,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Williamsbirne",
@@ -702,7 +640,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: true,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Whiskey Johnnie Walker Red",
@@ -712,7 +649,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: true,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Johnnie Walker black",
@@ -722,7 +658,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: true,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Ballanties",
@@ -732,7 +667,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: true,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "The Glenlivet",
@@ -742,7 +676,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: true,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Chivas Regal",
@@ -752,7 +685,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: true,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "jim Beam",
@@ -762,7 +694,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: true,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "jack Danniels",
@@ -772,7 +703,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: true,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "James Irisch Wishkey",
@@ -782,7 +712,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: true,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Jack Danniel Honey",
@@ -792,7 +721,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: true,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Vodka Absolute Vodka",
@@ -802,7 +730,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: true,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Vodka Gorbatschow",
@@ -812,7 +739,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: true,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Parliment Vodka",
@@ -822,7 +748,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: true,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Finlandia",
@@ -832,7 +757,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: true,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Long Barcadi Cola",
@@ -842,7 +766,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: true,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Gin Tonic",
@@ -852,7 +775,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: true,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Vodka Lemon",
@@ -862,7 +784,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: true,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Burrito de Verduras",
@@ -872,7 +793,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Burrito de Pollo",
@@ -882,7 +802,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Burrito de Picadillo",
@@ -892,7 +811,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Burrito de Pescado",
@@ -902,7 +820,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Tacos Arriba",
@@ -912,7 +829,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Tacos con pollo",
@@ -922,7 +838,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Tacos con picadillo",
@@ -932,7 +847,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Tacos con Verduras",
@@ -942,7 +856,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Burrito de Espinacas",
@@ -952,7 +865,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Chicken chilli",
@@ -962,7 +874,6 @@ class Product extends Equatable {
       isRecommended: true,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Chicken Madras",
@@ -972,7 +883,6 @@ class Product extends Equatable {
       isRecommended: true,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Chicken Himalya",
@@ -982,7 +892,6 @@ class Product extends Equatable {
       isRecommended: true,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Chicken Mango",
@@ -992,7 +901,6 @@ class Product extends Equatable {
       isRecommended: true,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Lamm lahori",
@@ -1002,7 +910,6 @@ class Product extends Equatable {
       isRecommended: true,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Lamm Vindalo",
@@ -1012,7 +919,6 @@ class Product extends Equatable {
       isRecommended: true,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Lamm Myhtra",
@@ -1022,7 +928,6 @@ class Product extends Equatable {
       isRecommended: true,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Lamm Mango",
@@ -1032,7 +937,6 @@ class Product extends Equatable {
       isRecommended: true,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Hüftsteak 200g**",
@@ -1042,7 +946,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Hüftsteak 300g**",
@@ -1052,7 +955,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Hüftsteak 400g**",
@@ -1062,7 +964,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Entrecôte 200g**",
@@ -1072,7 +973,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Entrecôte 300g**",
@@ -1082,7 +982,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Entrecôte 400g**",
@@ -1092,7 +991,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Rumpsteak 200g**",
@@ -1102,7 +1000,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Rumpsteak 300g**",
@@ -1112,7 +1009,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Rumpsteak 400g**",
@@ -1122,7 +1018,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Filetsteak 200g**",
@@ -1132,7 +1027,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Filetsteak 300g**",
@@ -1142,7 +1036,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Filetsteak 400g**",
@@ -1152,7 +1045,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Pfeffersteak vom Rind 200g**",
@@ -1162,7 +1054,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Pfeffersteak vom Rind 300g**",
@@ -1172,7 +1063,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Pfeffersteak vom Rind 400g**",
@@ -1182,7 +1072,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Rostbraten 200g**",
@@ -1192,7 +1081,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Rostbraten 300g**",
@@ -1202,7 +1090,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Rostbraten 400g**",
@@ -1212,7 +1099,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Lammfilet 200g**",
@@ -1222,7 +1108,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Lammfilet 300g**",
@@ -1232,7 +1117,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Lammfilet 400g**",
@@ -1242,7 +1126,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Pfifferlingsauce",
@@ -1252,7 +1135,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Champignonsauce",
@@ -1262,7 +1144,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Grüne Pfeffersauce",
@@ -1272,7 +1153,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Gorgonzolasauce",
@@ -1282,7 +1162,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Avocadocréme",
@@ -1292,7 +1171,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Sauerrahm",
@@ -1302,7 +1180,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Salsa Roja",
@@ -1312,7 +1189,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Jalapeños",
@@ -1322,7 +1198,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Pommes frites",
@@ -1332,7 +1207,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Kroketten",
@@ -1342,7 +1216,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Backkartoffel",
@@ -1352,7 +1225,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Bratkartoffeln",
@@ -1362,7 +1234,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Patatas fritas",
@@ -1372,7 +1243,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Manioc",
@@ -1382,7 +1252,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Frojoles",
@@ -1392,7 +1261,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Champignonpfanne",
@@ -1402,7 +1270,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Röstzwiebeln",
@@ -1412,7 +1279,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Grüne Bohnen",
@@ -1422,7 +1288,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "mexikanisches Verduras",
@@ -1432,7 +1297,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Kräuterbutter",
@@ -1442,7 +1306,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Arriba - Brot",
@@ -1452,7 +1315,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Arroz",
@@ -1462,7 +1324,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Grilltomate",
@@ -1472,7 +1333,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Broccoli",
@@ -1482,7 +1342,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Extra Käse",
@@ -1492,7 +1351,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Beilagesalat",
@@ -1502,7 +1360,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Bacon",
@@ -1512,7 +1369,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Pechugas alla Parilla",
@@ -1522,7 +1378,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Pechugas poblano",
@@ -1532,7 +1387,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Pollo con Pina",
@@ -1542,7 +1396,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Mole Verde á la Petitas",
@@ -1552,7 +1405,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Mole Rojo de Cacahuate ",
@@ -1562,7 +1414,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "200g** Bistec Ranchero",
@@ -1572,7 +1423,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Costillas 500g**",
@@ -1582,7 +1432,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Fileto de Cerdo 200g**",
@@ -1592,7 +1441,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "200g** Bistec Arriba Mexico",
@@ -1602,7 +1450,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "200g** Steak nach Art des Hauses",
@@ -1612,7 +1459,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "200g** Mexico-Steak",
@@ -1622,7 +1468,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Arriba Mexico-Grillteller",
@@ -1632,7 +1477,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Cerdo Almendrado",
@@ -1642,7 +1486,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Puntas Res a la Mexicana",
@@ -1652,7 +1495,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Filetto Mexicano",
@@ -1662,7 +1504,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Tres Muchachos",
@@ -1672,7 +1513,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Grillplatte für 2 Personen",
@@ -1682,7 +1522,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Fajitas de Pollo",
@@ -1692,7 +1531,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Fajitas de Carne",
@@ -1702,7 +1540,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Fajitas de Cerdo",
@@ -1712,7 +1549,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Fajitas Combinadas",
@@ -1722,7 +1558,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Fajitas Vegetarian",
@@ -1732,7 +1567,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Fajitas Camarones",
@@ -1742,7 +1576,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Chicken- Burger",
@@ -1752,7 +1585,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Hamburger",
@@ -1762,7 +1594,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Cheese-Burger",
@@ -1772,7 +1603,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Texas Chili-Burger",
@@ -1782,7 +1612,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Bacon-Burger ",
@@ -1792,7 +1621,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Mexican-Burger",
@@ -1802,7 +1630,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: " Arriba Mexico-Burger",
@@ -1812,7 +1639,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Gigant Burger",
@@ -1822,7 +1648,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Gigant-Cheese-Burger",
@@ -1832,7 +1657,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Gigant-Mexican-Burger",
@@ -1842,7 +1666,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Gigant-Bacon-Burger",
@@ -1852,7 +1675,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Pasta Mexicana",
@@ -1862,7 +1684,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Shrimps & Veggie Pasta",
@@ -1872,7 +1693,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Beef-Carne",
@@ -1882,7 +1702,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Pasta Primavera",
@@ -1892,7 +1711,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Pasta Chicken",
@@ -1902,7 +1720,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Pasta California",
@@ -1912,7 +1729,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Pasta Chorico",
@@ -1922,7 +1738,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Pasta Camerones",
@@ -1932,7 +1747,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Pasta Meryanos",
@@ -1942,7 +1756,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Pasta Mythra",
@@ -1952,7 +1765,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Pasta Kamalas",
@@ -1962,7 +1774,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Pasta Salas",
@@ -1972,7 +1783,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Camarones Mexicana",
@@ -1982,7 +1792,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Fischpfanne",
@@ -1992,7 +1801,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Salmone con Nopales",
@@ -2002,7 +1810,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Salmone al Tequila",
@@ -2012,7 +1819,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: " Salmone California",
@@ -2022,7 +1828,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Junior Burger",
@@ -2032,7 +1837,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Crazy Chicken",
@@ -2042,7 +1846,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Chicken Nuggets",
@@ -2052,7 +1855,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Pasta Chicken",
@@ -2062,7 +1864,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Mini-Hüftsteak 120g**",
@@ -2072,7 +1873,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Lady-Filetsteak 120g**",
@@ -2082,7 +1882,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Espresso",
@@ -2092,7 +1891,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Espresso Macchiato",
@@ -2102,7 +1900,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "doppelter Espresso",
@@ -2112,7 +1909,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Café Crème",
@@ -2122,7 +1918,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Milchkaffee",
@@ -2132,7 +1927,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Cappuccino",
@@ -2142,7 +1936,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Amaretto Cappuccino",
@@ -2152,7 +1945,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Bailays Cappuccino",
@@ -2162,7 +1954,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Latte Macchiato",
@@ -2172,7 +1963,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Mexican Kaffee",
@@ -2182,7 +1972,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "BIO FRÜCHTE NATUR",
@@ -2192,7 +1981,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "BIO GRÜNTEE JASMIN Blatt",
@@ -2202,7 +1990,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "English Select Ceylon Orange PEKOE blatt",
@@ -2212,7 +1999,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "PFEFFERMINZBLÄTTER",
@@ -2222,7 +2008,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "KAMILLENBLÜTEN",
@@ -2232,7 +2017,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Chai Latte Classic",
@@ -2242,7 +2026,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Schoko Chai Latte",
@@ -2252,7 +2035,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Glühwein",
@@ -2262,7 +2044,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Grog",
@@ -2272,7 +2053,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Barcadi & Cola",
@@ -2282,7 +2062,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Gin-Tonic³",
@@ -2292,9 +2071,8 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
-     Product(
+    Product(
       name: "Whisky-Cola",
       category: "Long Drinks",
       price: 6.90,
@@ -2302,9 +2080,8 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
-     Product(
+    Product(
       name: "Wodka-Lemon",
       category: "Long Drinks",
       price: 6.90,
@@ -2312,9 +2089,8 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
-     Product(
+    Product(
       name: "Southern-Ginger",
       category: "Long Drinks",
       price: 6.90,
@@ -2322,9 +2098,8 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
-     Product(
+    Product(
       name: "Batida-Kirsch",
       category: "Long Drinks",
       price: 6.90,
@@ -2332,9 +2107,8 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
-     Product(
+    Product(
       name: "Cuba Libre",
       category: "Long Drinks",
       price: 6.90,
@@ -2342,9 +2116,8 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
-     Product(
+    Product(
       name: "Campari",
       category: "Long Drinks",
       price: 6.90,
@@ -2352,9 +2125,8 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
-     Product(
+    Product(
       name: "Red Bull-Wodka",
       category: "Long Drinks",
       price: 6.90,
@@ -2362,9 +2134,8 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
-     Product(
+    Product(
       name: "Red Bull-Prosecco",
       category: "Long Drinks",
       price: 6.90,
@@ -2372,9 +2143,8 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
-     Product(
+    Product(
       name: "Red Bull-Campari",
       category: "Long Drinks",
       price: 6.90,
@@ -2382,9 +2152,8 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
-     Product(
+    Product(
       name: "Sierra Tequila Silver Palomo",
       category: "Long Drinks",
       price: 6.90,
@@ -2392,9 +2161,8 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
-      Product(
+    Product(
       name: "Henkell Trocken Piccolo(Fl. 0.2l)",
       category: "Long Drinks",
       price: 4.50,
@@ -2402,9 +2170,8 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
-      Product(
+    Product(
       name: "Henkell Trocken(Fl. 0.75l)",
       category: "Long Drinks",
       price: 18.00,
@@ -2412,9 +2179,8 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
-     Product(
+    Product(
       name: "Concha y Toro(CHILENISCH)-Fl. 0.75l",
       category: "Long Drinks",
       price: 14.90,
@@ -2422,9 +2188,8 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
-      Product(
+    Product(
       name: "Concha y Toro(CHILENISCH)Blance-Fl. 0.75l",
       category: "Long Drinks",
       price: 14.90,
@@ -2432,7 +2197,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "L.A. Cetto rot(MEXIKANISCH)-Fl. 0.75l",
@@ -2442,7 +2206,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "L.A. Cetto weiß(MEXIKANISCH)-Fl. 0.75l",
@@ -2452,7 +2215,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Concha y Toro(Offene Weine)-0.2l",
@@ -2462,7 +2224,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Concha y Toro(Offene Weine)-0.5l",
@@ -2472,7 +2233,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Concha y Toro(Sauvignon Blanc)-0.2l",
@@ -2482,7 +2242,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Concha y Toro(Sauvignon Blanc)-0.5l",
@@ -2492,7 +2251,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Concha y Toro Rosé -0.2l",
@@ -2502,9 +2260,8 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
-     Product(
+    Product(
       name: "Concha y Toro Rosé-0.5l",
       category: "Long Drinks",
       price: 7.90,
@@ -2512,9 +2269,8 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
-     Product(
+    Product(
       name: "Dunviro Rioja(Spanischer Rotwein)-0.2l",
       category: "Long Drinks",
       price: 3.90,
@@ -2522,9 +2278,8 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
-       Product(
+    Product(
       name: "Dunviro Rioja(Spanischer Rotwein)-0.5l",
       category: "Long Drinks",
       price: 7.90,
@@ -2532,7 +2287,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Dunviro Rioja(Spanischer Weißwein trocken)-0.2l",
@@ -2542,7 +2296,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Dunviro Rioja(Spanischer Weißwein trocken)-0.5l",
@@ -2552,7 +2305,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Lambrusco(Italienischer Perlwein,mild und süß)-0.2l",
@@ -2562,7 +2314,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Lambrusco(Italienischer Perlwein,mild und süß)-0.5l",
@@ -2572,7 +2323,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Sangria(Weinhaltiges Getränk mit Früchten)-0.2l",
@@ -2582,7 +2332,6 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
     Product(
       name: "Weinschorle(Weinhaltiges Getränk)-0.2l",
@@ -2592,7 +2341,10 @@ class Product extends Equatable {
       isRecommended: false,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/biryani.jpg',
     ),
   ];
+
+  static get data => products;
+
+  // List <Object?>get length =>  products=[];
 }

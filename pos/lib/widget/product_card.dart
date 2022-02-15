@@ -16,7 +16,7 @@ class ProducutCard extends StatelessWidget {
     Key? key,
     required this.product,
     this.widthFactor = 2.0,
-    this.leftPosition = 5,
+    this.leftPosition = 10,
     this.isWishlist = false,
   }) : super(key: key);
 
@@ -47,7 +47,7 @@ class ProducutCard extends StatelessWidget {
           Positioned(
             child: Container(
               width: widthValue - 5.w - leftPosition,
-              height: 58.h,
+              height: 54.h,
               alignment: Alignment.bottomCenter,
               decoration: BoxDecoration(
                 color: Colors.black.withAlpha(50),
@@ -57,7 +57,7 @@ class ProducutCard extends StatelessWidget {
           Positioned(
             child: Container(
               width: widthValue - 10.w - leftPosition,
-              height: 55.h,
+              height: 50.h,
               alignment: Alignment.bottomCenter,
               decoration: BoxDecoration(
                 color: Colors.black.withAlpha(120),
@@ -68,7 +68,7 @@ class ProducutCard extends StatelessWidget {
                 child: Row(
                   children: [
                     Expanded(
-                      flex: 3,
+                      flex: 2,
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.start,

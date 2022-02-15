@@ -1,13 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:tarka/model/cart_model.dart';
 import 'package:tarka/model/category_model.dart';
 import 'package:tarka/model/product_model.dart';
 import 'package:tarka/screens/home/home_screen.dart';
 import 'package:tarka/screens/screens.dart';
 
 class AppRouter {
-  static Route onGenerateRoute(RouteSettings settings) {
+  static Route<dynamic> onGenerateRoute(RouteSettings settings) {
     print("Route is: ${settings.name}");
 
     switch (settings.name) {
@@ -29,6 +28,8 @@ class AppRouter {
         return CheckoutScreen.route();
       case Profiles.routeName:
         return Profiles.route();
+      case Print.routeName:
+        return Print.route(product: settings.arguments as Product);
 
       default:
         return _errorRoute();

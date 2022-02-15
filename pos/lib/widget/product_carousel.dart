@@ -15,13 +15,18 @@ class ProductCarousel extends StatelessWidget {
     return SizedBox(
       height: 90.h,
       child: ListView.builder(
-          physics:BouncingScrollPhysics(parent: BouncingScrollPhysics()),
-          padding: EdgeInsets.symmetric(horizontal: 10.w, vertical: 5.h,),
+          physics: BouncingScrollPhysics(),
+          padding: EdgeInsets.symmetric(
+            horizontal: 10.w,
+            vertical: 5.h,
+          ),
           scrollDirection: Axis.horizontal,
           itemCount: products.length,
-          itemBuilder: (context, index){
+          itemBuilder: (context, index) {
             return Padding(
-              padding: EdgeInsets.only(right: 5.w,),
+              padding: EdgeInsets.only(
+                right: 5.w,
+              ),
               child: ProducutCard(
                 product: products[index],
               ),

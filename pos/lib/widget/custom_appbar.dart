@@ -13,13 +13,13 @@ class CustomAppBar extends StatelessWidget with PreferredSizeWidget {
     return Center(
       child: AppBar(
         centerTitle: true,
-        backgroundColor: Colors.transparent,
-        elevation: 0,
+        // elevation: 8,
+        shadowColor: Colors.blueGrey,
+        backgroundColor: Colors.blueGrey,
         title: Container(
           color: Colors.transparent,
           child: Padding(
-            padding:
-               EdgeInsets.symmetric(vertical: 10.h, horizontal: 10.w),
+            padding: EdgeInsets.symmetric(vertical: 10.h, horizontal: 10.w),
             child: Text(
               title,
               style: Theme.of(context)

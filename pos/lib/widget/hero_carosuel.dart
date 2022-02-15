@@ -34,7 +34,7 @@ class HeroCarosuel extends StatelessWidget {
             child: Stack(
               children: <Widget>[
                 Image.asset(
-                  product == null ? category!.imageUrl : product!.imaUrl,
+                  product == null ? category!.imageUrl : product!.imaUrl!,
                   fit: BoxFit.cover,
                   width: 1000.w,
                 ),

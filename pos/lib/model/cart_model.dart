@@ -5,6 +5,7 @@ class Cart extends Equatable {
   final List<Product> products;
   const Cart({this.products = const <Product>[]});
 
+
   @override
   List<Object?> get props => [products];
 
@@ -16,6 +17,7 @@ class Cart extends Equatable {
         quantity[product] = 1;
       } else {
         quantity[product] += 1;
+        
       }
     });
     return quantity;

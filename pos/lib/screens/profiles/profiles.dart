@@ -27,6 +27,7 @@ class Profiles extends StatelessWidget {
             height: 110.h,
             width: 110.w,
             child: CircleAvatar(
+              
               backgroundImage: AssetImage("images/xtz.jpg"),
             ),
           ),
