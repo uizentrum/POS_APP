@@ -32,6 +32,8 @@ class Product extends Equatable {
         isDrink
       ];
 
+
+
   static List<Product> products = [
     Product(
       name: "Elotes",
@@ -41,7 +43,7 @@ class Product extends Equatable {
       isRecommended: true,
       isRecentlyadded: false,
       isDrink: false,
-      // imaUrl: 'images/OIP.jpg',
+ 
     ),
     Product(
       name: "Onionringe",

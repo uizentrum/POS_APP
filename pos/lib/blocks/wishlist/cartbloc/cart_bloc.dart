@@ -42,6 +42,7 @@ class CartBloc extends Bloc<CartEvent, CartState> {
       CartProductRemoved event, CartState state) async* {
     if (state is CartLoaded) {
       try {
+       
         yield CartLoaded(
             cart: Cart(
                 products: List.from(state.cart.products)

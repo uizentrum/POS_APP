@@ -68,7 +68,6 @@ class ProducutCard extends StatelessWidget {
                 child: Row(
                   children: [
                     Expanded(
-                      flex: 2,
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.start,

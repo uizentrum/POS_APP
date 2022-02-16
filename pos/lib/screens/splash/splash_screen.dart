@@ -16,36 +16,28 @@ class SplashScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     Timer(Duration(seconds: 2), () => Navigator.pushNamed(context, "/"));
     return Scaffold(
-      backgroundColor:Colors.blueGrey.shade800,
+      backgroundColor: Colors.blueGrey.shade800,
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Center(
-            child: ClipRRect(
+            child: CircleAvatar(
+              radius: 100.sp,
               child: Image(
                 fit: BoxFit.cover,
-                image: AssetImage("assets/main.jpg"),
-              
+                image: AssetImage("images/pos.png"),
               ),
             ),
           ),
           SizedBox(
             height: 10,
           ),
-          Container(
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(5),
-            ),
-            height: 40.h,
-            width: 100.w,
-            color: Colors.black,
-            child: Text(
-              "Welcome",
-              style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 22.sp,
-                  fontWeight: FontWeight.bold),
-            ),
+          Text(
+            "Point Of Sale",
+            style: TextStyle(
+                color: Colors.amber,
+                fontSize: 20.sp,
+                fontWeight: FontWeight.bold),
           ),
         ],
       ),

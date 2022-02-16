@@ -9,6 +9,7 @@ import 'package:tarka/blocks/wishlist/wishlist_event.dart';
 import 'package:tarka/config/app_router.dart';
 import 'package:tarka/config/theme.dart';
 import 'package:tarka/screens/home/home_screen.dart';
+import 'package:tarka/screens/screens.dart';
 import 'blocks/wishlist/cartbloc/cart_bloc.dart';
 
 void main() {
@@ -33,11 +34,10 @@ class MyApp extends StatelessWidget {
           title: 'POS',
           theme: theme(),
           onGenerateRoute: AppRouter.onGenerateRoute,
-          initialRoute: HomeScreen.routeName,
+          initialRoute: SplashScreen.routeName,
         ),
         designSize: Size(411, 866),
       ),
     );
   }
 }
- 

@@ -23,7 +23,6 @@ class HomeScreen extends StatelessWidget {
     // print("phone width..........." +
     //     MediaQuery.of(context).size.width.toString());
     return SafeArea(
-
       child: Scaffold(
         backgroundColor: Colors.blueGrey.shade800,
         appBar: CustomAppBar(
@@ -47,14 +46,14 @@ class HomeScreen extends StatelessWidget {
                       child: Column(
                         children: [
                           Material(
-                            borderRadius:
-                                BorderRadius.all(Radius.circular(50.r)),
-                            child: Padding(
-                              padding: EdgeInsets.all(8.w),
-                              child: Image.asset(
-                                "images/xtz.jpg",
-                                width: 80.w,
-                                height: 80.h,
+                            color: Colors.transparent,
+                            child: Center(
+                              child: CircleAvatar(
+                                radius: 40.sp,
+                                child: Image(
+                                  fit: BoxFit.cover,
+                                  image: AssetImage("images/pos.png"),
+                                ),
                               ),
                             ),
                           ),
