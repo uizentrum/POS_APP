@@ -87,6 +87,7 @@ class HomeScreen extends StatelessWidget {
                       enlargeCenterPage: true,
                       enableInfiniteScroll: true,
                       autoPlay: true,
+                      autoPlayInterval: Duration(seconds: 2),
                     ),
                     items: Category.categories
                         .map((category) => HeroCarosuel(category: category))

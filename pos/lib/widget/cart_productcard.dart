@@ -18,6 +18,7 @@ class CartProductCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // print("${quantity}" + "FSGRGERFGEFJOIJAQIOJFQJEFRE");
     return Padding(
       padding: EdgeInsets.only(bottom: 8.w),
       child: Card(
@@ -60,9 +61,9 @@ class CartProductCard extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(
-              width: 10.w,
-            ),
+            // SizedBox(
+            //   width: 10.w,
+            // ),
             BlocBuilder<CartBloc, CartState>(builder: (context, state) {
               return Row(
                 children: [

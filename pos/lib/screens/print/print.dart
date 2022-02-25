@@ -3,6 +3,7 @@ import 'package:esc_pos_bluetooth/esc_pos_bluetooth.dart';
 import 'package:esc_pos_utils/esc_pos_utils.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_bluetooth_basic/flutter_bluetooth_basic.dart';
+import 'package:tarka/blocks/wishlist/cartbloc/cart_state.dart';
 import 'dart:io' show Platform;
 import 'package:tarka/model/cart_model.dart';
 import 'package:tarka/model/product_model.dart';
@@ -12,16 +13,26 @@ import 'package:tarka/widget/custom_navbar.dart';
 class Print extends StatefulWidget {
   static const String? routeName = "/print";
 
-  static Route route({required Product product}) {
-    return MaterialPageRoute(
-      settings: RouteSettings(name: routeName),
-      builder: (_) => Print(),
-    );
-  }
+  final state;
 
+  const Print({
+    Key? key,
+    required this.state,
+  }) : super(key: key);
+
+  // static Route route({}) {
+  //   return MaterialPageRoute(
+  //     settings: RouteSettings(name: routeName),
+  //     builder: (_) => Print(
+
+  //     ),
+  //   );
+  // }
 
   @override
-  _PrintState createState() => _PrintState();
+  _PrintState createState() => _PrintState(
+        state,
+      );
 }
 
 class _PrintState extends State<Print> {
@@ -29,9 +40,15 @@ class _PrintState extends State<Print> {
   List<PrinterBluetooth> _devices = [];
   String? _devicesMsg;
   BluetoothManager bluetoothManager = BluetoothManager.instance;
+  final state;
+
+  _PrintState(
+    this.state,
+  );
 
   @override
   void initState() {
+    print(state);
     if (Platform.isAndroid) {
       bluetoothManager.state.listen((
         val,
@@ -63,7 +80,7 @@ class _PrintState extends State<Print> {
           style: TextStyle(color: Colors.amber),
         ),
         centerTitle: true,
-        // elevation: 8,
+        elevation: 8,
         shadowColor: Colors.black,
         backgroundColor: Colors.blueGrey,
       ),
@@ -130,21 +147,20 @@ class _PrintState extends State<Print> {
           styles: PosStyles(bold: true)),
     ]);
 
-    // for (var i = 0; i < widget.products.length; i++) {
-    //   ticket.text(widget.products[i].name);
-    //   ticket.row([
-    //     PosColumn(text: '${widget.products[i].price}€', width: 6),
-    //     PosColumn(text: '${widget.products[i].name}€', width: 6),
-    //   ]);
-    // }
+    for (var i = 0; i < widget.state.length; i++) {
+      ticket.text(widget.state[i].name);
+      ticket.row([
+        PosColumn(text: '\$${widget.state[i].price.toString()}', width: 6),
+        // PosColumn(text: '\$${widget.state[i].price.toString()}', width: 6),
+      ]);
+    }
 
     ticket.feed(1);
 
     ticket.row([
-      PosColumn(text: 'Total', width: 6, styles: PosStyles(bold: true)),
+      PosColumn(text: 'Total: \$', width: 6, styles: PosStyles(bold: true)),
       PosColumn(
-          // text:  "${widget.products.price}€",
-          // text: "${widget.product.price.toString()}",
+          text: "${state.cart.totolString}",
           width: 6,
           styles: PosStyles(bold: true)),
     ]);

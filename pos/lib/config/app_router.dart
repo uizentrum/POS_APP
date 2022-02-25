@@ -29,7 +29,7 @@ class AppRouter {
       case Profiles.routeName:
         return Profiles.route();
       case Print.routeName:
-        return Print.route(product: settings.arguments as Product);
+      // return Print.route();
 
       default:
         return _errorRoute();

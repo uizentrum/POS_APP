@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1023135967200",
+    "project_id": "point-of-sale-a2717",
+    "storage_bucket": "point-of-sale-a2717.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1023135967200:android:0974e9368a32bd059bed85",
+        "android_client_info": {
+          "package_name": "com.example.tarka"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1023135967200-vjin87r2g0mni40qjs659sau39focuoh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC83RhlrtmVv8eHadGcwQh2tMiuW8dbUvE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1023135967200-vjin87r2g0mni40qjs659sau39focuoh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

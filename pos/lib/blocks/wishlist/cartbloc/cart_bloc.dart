@@ -2,6 +2,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:tarka/blocks/wishlist/cartbloc/cart_event.dart';
 import 'package:tarka/blocks/wishlist/cartbloc/cart_state.dart';
 import 'package:tarka/model/cart_model.dart';
+import 'package:tarka/model/models.dart';
 
 class CartBloc extends Bloc<CartEvent, CartState> {
   CartBloc() : super(CartLoading());
@@ -34,6 +35,7 @@ class CartBloc extends Bloc<CartEvent, CartState> {
         yield CartLoaded(
             cart: Cart(
                 products: List.from(state.cart.products)..add(event.product)));
+        print(Product.data+".................................................................." );
       } catch (_) {}
     }
   }
@@ -42,7 +44,6 @@ class CartBloc extends Bloc<CartEvent, CartState> {
       CartProductRemoved event, CartState state) async* {
     if (state is CartLoaded) {
       try {
-       
         yield CartLoaded(
             cart: Cart(
                 products: List.from(state.cart.products)

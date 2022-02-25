@@ -1,16 +1,16 @@
 import 'package:equatable/equatable.dart';
 
 class Product extends Equatable {
-  final String name;
-  final String category;
-  final double price;
-  final String? imaUrl;
-  final bool isRecommended;
-  final bool isPopular;
-  final bool isRecentlyadded;
-  final bool isDrink;
+  String name;
+  String category;
+  double price;
+  String? imaUrl;
+  bool isRecommended;
+  bool isPopular;
+  bool isRecentlyadded;
+  bool isDrink;
 
-  const Product({
+  Product({
     required this.name,
     required this.category,
     required this.price,
@@ -20,6 +20,7 @@ class Product extends Equatable {
     required this.isRecentlyadded,
     required this.isDrink,
   });
+
   @override
   List<Object?> get props => [
         name,
@@ -32,7 +33,28 @@ class Product extends Equatable {
         isDrink
       ];
 
-
+  // Product.fromJson(Map<String, dynamic> json) {
+  //   name = json["name"];
+  //   category = json["category"];
+  //   price = json["price"];
+  //   imaUrl = json["imaUrl"];
+  //   isRecommended = json["isRecommended"];
+  //   isPopular = json["isPopular"];
+  //   isRecentlyadded = json["isRecentlyaded"];
+  //   isDrink = json["isDrink"];
+  // }
+  Map<String, dynamic> toJson() {
+    final Map<String, dynamic> orderdata = new Map<String, dynamic>();
+    orderdata["name"] = this.name;
+    orderdata["category"] = this.category;
+    orderdata["price"] = this.price;
+    orderdata["imaUrl"] = this.imaUrl;
+    orderdata["isRecommended"] = this.isRecommended;
+    orderdata["isPopular"] = this.isPopular;
+    orderdata["isRecentlyadded"] = this.isRecentlyadded;
+    orderdata["isDrink"] = this.isDrink;
+    return orderdata;
+  }
 
   static List<Product> products = [
     Product(
@@ -43,7 +65,6 @@ class Product extends Equatable {
       isRecommended: true,
       isRecentlyadded: false,
       isDrink: false,
- 
     ),
     Product(
       name: "Onionringe",
@@ -80,7 +101,6 @@ class Product extends Equatable {
       isRecommended: true,
       isRecentlyadded: false,
       isDrink: false,
-      imaUrl: 'images/OIP.jpg',
     ),
     Product(
       name: "Nachos con pollo",

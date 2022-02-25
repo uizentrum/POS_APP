@@ -35,7 +35,7 @@ class SplashScreen extends StatelessWidget {
           Text(
             "Point Of Sale",
             style: TextStyle(
-                color: Colors.amber,
+                color: Colors.white,
                 fontSize: 20.sp,
                 fontWeight: FontWeight.bold),
           ),

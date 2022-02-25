@@ -12,8 +12,10 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CheckoutScreen extends StatelessWidget {
   static const String routeName = "/checkout";
-  
 
+  const CheckoutScreen({
+    Key? key,
+  }) : super(key: key);
 
   static Route route() {
     return MaterialPageRoute(
@@ -106,12 +108,14 @@ class CheckoutScreen extends StatelessWidget {
                             ),
                             child: Text('Print'),
                             onPressed: () {
+                              // print("$quantity");
                               Navigator.push(
-                                  context,
-                                  MaterialPageRoute<CartState>(
-                                      builder: (_) => Print( 
-                    
-                                  )),);
+                                context,
+                                MaterialPageRoute<CartState>(
+                                    builder: (_) => Print(
+                                          state: state.cart.products,
+                                        )),
+                              );
                             },
                           ),
                         ),
