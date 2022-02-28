@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:tarka/blocks/wishlist/cartbloc/cart_bloc.dart';
-import 'package:tarka/blocks/wishlist/cartbloc/cart_event.dart';
-import 'package:tarka/blocks/wishlist/cartbloc/cart_state.dart';
-import 'package:tarka/blocks/wishlist/wishlist_block.dart';
-import 'package:tarka/blocks/wishlist/wishlist_event.dart';
-import 'package:tarka/blocks/wishlist/wishlist_state.dart';
+import 'package:pos/blocks/wishlist/cartbloc/cart_bloc.dart';
+import 'package:pos/blocks/wishlist/cartbloc/cart_event.dart';
+import 'package:pos/blocks/wishlist/cartbloc/cart_state.dart';
+import 'package:pos/blocks/wishlist/wishlist_block.dart';
+import 'package:pos/blocks/wishlist/wishlist_event.dart';
+import 'package:pos/blocks/wishlist/wishlist_state.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomNavBar extends StatelessWidget {
@@ -243,7 +243,7 @@ class CustomNavBar extends StatelessWidget {
     return [
       ElevatedButton(
         onPressed: () {
-          Navigator.pushNamed(context, "/");
+          Navigator.pushNamed(context, "/checkout");
         },
         style: ElevatedButton.styleFrom(
           elevation: 8,

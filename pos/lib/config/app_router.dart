@@ -1,19 +1,19 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:tarka/model/category_model.dart';
-import 'package:tarka/model/product_model.dart';
-import 'package:tarka/screens/home/home_screen.dart';
-import 'package:tarka/screens/screens.dart';
+import 'package:pos/model/category_model.dart';
+import 'package:pos/model/product_model.dart';
+import 'package:pos/screens/home/home_screen.dart';
+import 'package:pos/screens/screens.dart';
 
 class AppRouter {
   static Route<dynamic> onGenerateRoute(RouteSettings settings) {
     print("Route is: ${settings.name}");
 
     switch (settings.name) {
-      case "/":
-        return HomeScreen.route();
+      case "/splash":
+        return HomeScreen.route(category: settings.arguments as Category);
       case HomeScreen.routeName:
-        return HomeScreen.route();
+        return HomeScreen.route(category: settings.arguments as Category);
       case SplashScreen.routeName:
         return SplashScreen.route();
       case CartScreen.routeName:

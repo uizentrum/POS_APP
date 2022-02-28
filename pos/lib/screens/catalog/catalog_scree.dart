@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:tarka/model/category_model.dart';
-import 'package:tarka/model/product_model.dart';
-import 'package:tarka/widget/widget.dart';
+import 'package:pos/model/category_model.dart';
+import 'package:pos/model/product_model.dart';
+import 'package:pos/widget/widget.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CatalogScreen extends StatelessWidget {

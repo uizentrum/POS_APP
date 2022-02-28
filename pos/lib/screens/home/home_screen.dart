@@ -1,32 +1,37 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:tarka/model/category_model.dart';
-import 'package:tarka/model/models.dart';
-import 'package:tarka/screens/drawer/drawer.dart';
-import 'package:tarka/widget/widget.dart';
+import 'package:pos/model/category_model.dart';
+import 'package:pos/model/models.dart';
+import 'package:pos/screens/drawer/drawer.dart';
+import 'package:pos/widget/widget.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class HomeScreen extends StatelessWidget {
   static const String routeName = "/";
 
-  static Route route() {
+  static Route route({required Category category}) {
     return MaterialPageRoute(
       settings: RouteSettings(name: routeName),
-      builder: (_) => HomeScreen(),
+      builder: (_) => HomeScreen(
+        category: category,
+      ),
     );
   }
 
+  final Category category;
+
+  const HomeScreen({
+    Key? key,
+    required this.category,
+  });
+
   @override
   Widget build(BuildContext context) {
-    // print("phone height.........." +
-    //     MediaQuery.of(context).size.height.toString());
-    // print("phone width..........." +
-    //     MediaQuery.of(context).size.width.toString());
     return SafeArea(
       child: Scaffold(
         backgroundColor: Colors.blueGrey.shade800,
         appBar: CustomAppBar(
-          title: "POS",
+          title: "Arriba Mexico",
         ),
         bottomNavigationBar: CustomNavBar(screen: "/"),
         drawer: Drawer(
@@ -52,7 +57,7 @@ class HomeScreen extends StatelessWidget {
                                 radius: 40.sp,
                                 child: Image(
                                   fit: BoxFit.cover,
-                                  image: AssetImage("images/pos.png"),
+                                  image: AssetImage("images/demo.png"),
                                 ),
                               ),
                             ),
@@ -73,52 +78,75 @@ class HomeScreen extends StatelessWidget {
             ),
           ),
         ),
-        body: SafeArea(
-          child: SingleChildScrollView(
-            scrollDirection: Axis.vertical,
-            child: Container(
-              child: Column(
-                children: [
-                  CarouselSlider(
-                    options: CarouselOptions(
-                      aspectRatio: 1.5,
-                      viewportFraction: 0.9,
-                      enlargeStrategy: CenterPageEnlargeStrategy.height,
-                      enlargeCenterPage: true,
-                      enableInfiniteScroll: true,
-                      autoPlay: true,
-                      autoPlayInterval: Duration(seconds: 2),
-                    ),
-                    items: Category.categories
-                        .map((category) => HeroCarosuel(category: category))
-                        .toList(),
+        body: Column(
+          children: [
+            Text(
+              "Categories",
+              style: TextStyle(
+                  fontSize: 20,
+                  color: Colors.amber,
+                  fontWeight: FontWeight.bold),
+            ),
+
+            
+            Expanded(
+              flex: 2,
+              child: Container(
+                child: SingleChildScrollView(
+                  scrollDirection: Axis.vertical,
+                  child: Column(
+                    children: [
+                      CarouselSlider(
+                        options: CarouselOptions(
+                          aspectRatio: 5,
+                          viewportFraction: 0.95,
+                          // enlargeStrategy: CenterPageEnlargeStrateg
+                        ),
+                        items: Category.categories
+                            .map((category) => HeroCarosuel(category: category))
+                            .toList(),
+                      ),
+                      SectionTile(title: "Recommended"),
+                      ProductCarousel(
+                          products: Product.products
+                              .where((product) => product.isRecommended)
+                              .toList()),
+                      SectionTile(title: "Popular"),
+                      ProductCarousel(
+                          products: Product.products
+                              .where((product) => product.isPopular)
+                              .toList()),
+                      SectionTile(title: "Recently added"),
+                      ProductCarousel(
+                          products: Product.products
+                              .where(
+                                (product) => product.isRecentlyadded,
+                              )
+                              .toList()),
+                      SectionTile(title: "Drink"),
+                      ProductCarousel(
+                          products: Product.products
+                              .where((product) => product.isDrink)
+                              .toList()),
+                      SectionTile(title: "Vegan-Category"),
+                      ProductCarousel(
+                          products: Product.products
+                              .where(
+                                (product) => product.isRecentlyadded,
+                              )
+                              .toList()),
+                      SectionTile(title: "Snacks"),
+                      ProductCarousel(
+                        products: Product.products
+                            .where((product) => product.isDrink)
+                            .toList(),
+                      ),
+                    ],
                   ),
-                  SectionTile(title: "Recommended"),
-                  ProductCarousel(
-                      products: Product.products
-                          .where((product) => product.isRecommended)
-                          .toList()),
-                  SectionTile(title: "Popular"),
-                  ProductCarousel(
-                      products: Product.products
-                          .where((product) => product.isPopular)
-                          .toList()),
-                  SectionTile(title: "Recently added"),
-                  ProductCarousel(
-                      products: Product.products
-                          .where(
-                            (product) => product.isRecentlyadded,
-                          )
-                          .toList()),
-                  SectionTile(title: "Drink"),
-                  ProductCarousel(
-                      products: Product.products
-                          .where((product) => product.isDrink)
-                          .toList()),
-                ],
+                ),
               ),
             ),
-          ),
+          ],
         ),
       ),
     );

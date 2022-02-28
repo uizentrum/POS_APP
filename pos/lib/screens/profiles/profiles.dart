@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:tarka/widget/custom_appbar.dart';
-import 'package:tarka/widget/custom_navbar.dart';
+import 'package:pos/widget/custom_appbar.dart';
+import 'package:pos/widget/custom_navbar.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class Profiles extends StatelessWidget {
@@ -18,7 +18,7 @@ class Profiles extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor:Colors.blueGrey.shade800,
+      backgroundColor: Colors.blueGrey.shade800,
       appBar: CustomAppBar(title: "Profiles"),
       bottomNavigationBar: CustomNavBar(screen: routeName),
       body: Column(
@@ -27,7 +27,6 @@ class Profiles extends StatelessWidget {
             height: 110.h,
             width: 110.w,
             child: CircleAvatar(
-              
               backgroundImage: AssetImage("images/xtz.jpg"),
             ),
           ),

@@ -1,5 +1,5 @@
 import 'package:equatable/equatable.dart';
-import 'package:tarka/model/cart_model.dart';
+import 'package:pos/model/cart_model.dart';
 
 abstract class CartState extends Equatable {
   const CartState();

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:tarka/blocks/wishlist/wishlist_block.dart';
-import 'package:tarka/blocks/wishlist/wishlist_state.dart';
-import 'package:tarka/widget/widget.dart';
+import 'package:pos/blocks/wishlist/wishlist_block.dart';
+import 'package:pos/blocks/wishlist/wishlist_state.dart';
+import 'package:pos/widget/widget.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class WishListScreen extends StatelessWidget {
@@ -18,7 +18,7 @@ class WishListScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor:Colors.blueGrey.shade800,
+      backgroundColor: Colors.blueGrey.shade800,
       appBar: CustomAppBar(title: "wishlist"),
       bottomNavigationBar: CustomNavBar(
         screen: '/wishlist',

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:tarka/model/category_model.dart';
-import 'package:tarka/model/models.dart';
+import 'package:pos/model/category_model.dart';
+import 'package:pos/model/models.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class HeroCarosuel extends StatelessWidget {
@@ -25,47 +25,86 @@ class HeroCarosuel extends StatelessWidget {
         }
       },
       child: Container(
+        width: double.maxFinite,
         margin: EdgeInsets.symmetric(
           horizontal: 5.w,
-          vertical: 20.h,
+          vertical: 5.h,
         ),
-        child: ClipRRect(
-            borderRadius: BorderRadius.all(Radius.circular(10.r)),
-            child: Stack(
-              children: <Widget>[
-                Image.asset(
-                  product == null ? category!.imageUrl : product!.imaUrl!,
-                  fit: BoxFit.cover,
-                  width: 1000.w,
-                ),
-                Positioned(
-                  bottom: 0.0,
-                  left: 0.0,
-                  right: 0.0,
-                  child: Container(
-                    decoration: BoxDecoration(
-                      gradient: LinearGradient(
-                        colors: [
-                          Color.fromARGB(200, 0, 0, 0),
-                          Color.fromARGB(0, 0, 0, 0)
-                        ],
-                        begin: Alignment.bottomCenter,
-                        end: Alignment.topCenter,
-                      ),
-                    ),
-                    padding:
-                        EdgeInsets.symmetric(vertical: 10.h, horizontal: 20.w),
-                    child: Text(
-                        product == null ? category!.name : product!.name,
-                        style: Theme.of(context)
-                            .textTheme
-                            .headline4!
-                            .copyWith(color: Colors.white)),
-                  ),
-                ),
+        decoration: BoxDecoration(
+            gradient: LinearGradient(
+              colors: [
+                Colors.redAccent,
+                Colors.teal,
               ],
-            )),
+              begin: Alignment.bottomCenter,
+              end: Alignment.topCenter,
+            ),
+            borderRadius: BorderRadiusDirectional.circular(10.r)),
+        child: Center(
+          child: Text(product == null ? category!.name : product!.name,
+              style: Theme.of(context)
+                  .textTheme
+                  .headline4!
+                  .copyWith(color: Colors.white)),
+        ),
       ),
+
+      // Container(
+      //   margin: EdgeInsets.symmetric(
+      //     horizontal: 5.w,
+      //     vertical: 20.h,
+      //   ),
+      //   child: ClipRRect(
+      //       borderRadius: BorderRadius.all(Radius.circular(10.r)),
+      //       child: Stack(
+      //         children: <Widget>[
+      //           // Image.asset(
+      //           //   product == null ? category!.name : product!.name,
+      //           //   fit: BoxFit.cover,
+      //           //   width: 100.w,
+      //           // ),
+      //           Positioned(
+      //             bottom: 0.0,
+      //             left: 0.0,
+      //             right: 15,
+      //             child: Container(
+      //               decoration: BoxDecoration(
+      //                 gradient: LinearGradient(
+      //                   colors: [
+      //                     Colors.redAccent,
+      //                     Colors.teal,
+      //                   ],
+      //                   begin: Alignment.bottomCenter,
+      //                   end: Alignment.topCenter,
+      //                 ),
+      //               ),
+      //               padding:
+      //                   EdgeInsets.symmetric(vertical: 10.h, horizontal: 20.w),
+      //               // child: ListView.builder(
+      //               //     itemCount:category!.length,
+      //               //     itemBuilder: (c, i) {
+      //               //       return Card(
+      //               //         child: ListTile(
+      //               //           title: Text(
+
+      //               //                category!.name
+
+      //               //           ),
+      //               //         ),
+      //               //       );
+      //               //     }),
+      //               child: Text(
+      //                   product == null ? category!.name : product!.name,
+      //                   style: Theme.of(context)
+      //                       .textTheme
+      //                       .headline5!
+      //                       .copyWith(color: Colors.white)),
+      //             ),
+      //           ),
+      //         ],
+      //       ),
+      //       ),
+      // ),
     );
   }
 }

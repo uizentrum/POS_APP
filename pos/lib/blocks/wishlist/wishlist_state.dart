@@ -1,5 +1,5 @@
 import 'package:equatable/equatable.dart';
-import 'package:tarka/model/wishlist_model.dart';
+import 'package:pos/model/wishlist_model.dart';
 
 abstract class WishlistState extends Equatable {
   const WishlistState();
@@ -15,9 +15,8 @@ class WishlistLoadwd extends WishlistState {
 
   const WishlistLoadwd({this.wishlist = const Wishlist()});
 
-    @override
+  @override
   List<Object?> get props => [wishlist];
-
 }
 
 class WishlistError extends WishlistState {}

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:tarka/model/product_model.dart';
-import 'package:tarka/widget/product_card.dart';
+import 'package:pos/model/product_model.dart';
+import 'package:pos/widget/product_card.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ProductCarousel extends StatelessWidget {

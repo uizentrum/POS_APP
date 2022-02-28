@@ -1,10 +1,10 @@
 import 'package:equatable/equatable.dart';
-import 'package:tarka/model/product_model.dart';
+import 'package:pos/model/product_model.dart';
 
 class Wishlist extends Equatable {
   final List<Product> products;
-  const Wishlist({this.products=const<Product>[]});
+  const Wishlist({this.products = const <Product>[]});
 
   @override
-  List<Object?> get props =>[products];
+  List<Object?> get props => [products];
 }

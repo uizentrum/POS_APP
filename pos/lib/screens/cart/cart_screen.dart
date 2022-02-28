@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:tarka/blocks/wishlist/cartbloc/cart_bloc.dart';
-import 'package:tarka/blocks/wishlist/cartbloc/cart_state.dart';
-import 'package:tarka/widget/cart_productcard.dart';
+import 'package:pos/blocks/wishlist/cartbloc/cart_bloc.dart';
+import 'package:pos/blocks/wishlist/cartbloc/cart_state.dart';
+import 'package:pos/widget/cart_productcard.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:tarka/widget/widget.dart';
+import 'package:pos/widget/widget.dart';
 
 class CartScreen extends StatelessWidget {
   static const String? routeName = "/cart";
@@ -71,27 +71,34 @@ class CartScreen extends StatelessWidget {
                         thickness: 2,
                       ),
                       SingleChildScrollView(
-                        child: SizedBox(
-                          height: 430.h,
-                          child: ListView.builder(
-                              itemCount: state.cart
-                                  .productQuantity(state.cart.products)
-                                  .keys
-                                  .length,
-                              itemBuilder: (context, index) {
-                                return CartProductCard(
-                                  product: state.cart
-                                      .productQuantity(state.cart.products)
-                                      .keys
-                                      .elementAt(index),
-                                  quantity: state.cart
-                                      .productQuantity(state.cart.products)
-                                      .values
-                                      .elementAt(index),
-                                );
-                              }),
-                        ),
-                      ),
+                          child: SizedBox(
+                        height: 430.h,
+                        child: state.cart == null
+                            ? Center(
+                                child: Text(
+                                "Cart is Empty",
+                                style: TextStyle(
+                                    fontSize: 20, color: Colors.amber),
+                              ))
+                            : ListView.builder(
+                                itemCount: state.cart
+                                    .productQuantity(state.cart.products)
+                                    .keys
+                                    .length,
+                                itemBuilder: (context, index) {
+                                  return CartProductCard(
+                                    product: state.cart
+                                        .productQuantity(state.cart.products)
+                                        .keys
+                                        .elementAt(index),
+                                    quantity: state.cart
+                                        .productQuantity(state.cart.products)
+                                        .values
+                                        .elementAt(index),
+                                  );
+                                }),
+                      )),
+
                       // Divider(
                       //   thickness: 2,
                       // ),

@@ -1,7 +1,7 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:tarka/blocks/wishlist/wishlist_event.dart';
-import 'package:tarka/blocks/wishlist/wishlist_state.dart';
-import 'package:tarka/model/wishlist_model.dart';
+import 'package:pos/blocks/wishlist/wishlist_event.dart';
+import 'package:pos/blocks/wishlist/wishlist_state.dart';
+import 'package:pos/model/wishlist_model.dart';
 
 class WishlistBloc extends Bloc<WishlistEvent, WishlistState> {
   WishlistBloc() : super(WishlistLoading());

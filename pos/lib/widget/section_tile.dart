@@ -28,7 +28,11 @@ class SectionTile extends StatelessWidget {
             ),
           ),
         ),
-        Icon(Icons.arrow_right),
+        GestureDetector(
+            onTap: () {
+              Navigator.pushNamed(context, "/");
+            },
+            child: Icon(Icons.arrow_right)),
       ],
     );
   }

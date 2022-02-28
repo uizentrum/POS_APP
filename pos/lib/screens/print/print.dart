@@ -3,21 +3,24 @@ import 'package:esc_pos_bluetooth/esc_pos_bluetooth.dart';
 import 'package:esc_pos_utils/esc_pos_utils.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_bluetooth_basic/flutter_bluetooth_basic.dart';
-import 'package:tarka/blocks/wishlist/cartbloc/cart_state.dart';
+import 'package:pos/blocks/wishlist/cartbloc/cart_state.dart';
 import 'dart:io' show Platform;
-import 'package:tarka/model/cart_model.dart';
-import 'package:tarka/model/product_model.dart';
-import 'package:tarka/widget/custom_appbar.dart';
-import 'package:tarka/widget/custom_navbar.dart';
+import 'package:pos/model/cart_model.dart';
+import 'package:pos/model/product_model.dart';
+import 'package:pos/widget/custom_appbar.dart';
+import 'package:pos/widget/custom_navbar.dart';
 
 class Print extends StatefulWidget {
   static const String? routeName = "/print";
-
+  final quantity;
   final state;
+  final total;
 
   const Print({
     Key? key,
     required this.state,
+    required this.total,
+    this.quantity,
   }) : super(key: key);
 
   // static Route route({}) {
@@ -32,6 +35,8 @@ class Print extends StatefulWidget {
   @override
   _PrintState createState() => _PrintState(
         state,
+        total,
+        quantity,
       );
 }
 
@@ -41,15 +46,21 @@ class _PrintState extends State<Print> {
   String? _devicesMsg;
   BluetoothManager bluetoothManager = BluetoothManager.instance;
   final state;
+  final total;
+  final quantity;
 
   _PrintState(
     this.state,
+    this.total,
+    this.quantity,
   );
 
   @override
   void initState() {
     print(state);
     if (Platform.isAndroid) {
+      print(
+          "${quantity.toString()}+.....................................................quantity.");
       bluetoothManager.state.listen((
         val,
       ) {
@@ -115,7 +126,7 @@ class _PrintState extends State<Print> {
   Future<void> _startPrint(PrinterBluetooth printer) async {
     _printerManager.selectPrinter(printer);
     final result =
-        await _printerManager.printTicket(await _ticket(PaperSize.mm80));
+        await _printerManager.printTicket(await _ticket(PaperSize.mm58));
     showDialog(
       context: context,
       builder: (_) => AlertDialog(
@@ -127,18 +138,19 @@ class _PrintState extends State<Print> {
   Future<Ticket> _ticket(PaperSize paper) async {
     final ticket = Ticket(paper);
 
-    ticket.text(
-      'POS Purchase',
-      styles: PosStyles(
-          align: PosAlign.center,
-          height: PosTextSize.size2,
-          width: PosTextSize.size2),
-      linesAfter: 1,
-    );
-    ticket.row([
-      PosColumn(
-          text: 'Bestellnummer: ', width: 12, styles: PosStyles(bold: true)),
-    ]);
+    ticket.text('Arriba Mexico',
+        styles: PosStyles(
+            align: PosAlign.left,
+            bold: true,
+            height: PosTextSize.size2,
+            width: PosTextSize.size2));
+    ticket.feed(1);
+    ticket.text('Pichelsdorfer Street-98.',
+        styles: PosStyles(align: PosAlign.left, bold: true));
+    ticket.text('Ecke Bruderstr.',
+        styles: PosStyles(align: PosAlign.left, bold: true));
+    ticket.text('13595 Berlin- Spanddau.',
+        styles: PosStyles(align: PosAlign.left, bold: true));
 
     ticket.row([
       PosColumn(
@@ -148,19 +160,26 @@ class _PrintState extends State<Print> {
     ]);
 
     for (var i = 0; i < widget.state.length; i++) {
+      print(quantity.toString() + "...................................");
       ticket.text(widget.state[i].name);
       ticket.row([
+        PosColumn(
+            text: '\$${(double.parse(widget.state[i].price.toString()))}',
+            width: 6),
         PosColumn(text: '\$${widget.state[i].price.toString()}', width: 6),
-        // PosColumn(text: '\$${widget.state[i].price.toString()}', width: 6),
       ]);
     }
-
-    ticket.feed(1);
+    ticket.row([
+      PosColumn(
+          text: '-------------------------------',
+          width: 12,
+          styles: PosStyles(bold: true)),
+    ]);
 
     ticket.row([
-      PosColumn(text: 'Total: \$', width: 6, styles: PosStyles(bold: true)),
+      PosColumn(text: 'Total:- ', width: 6, styles: PosStyles(bold: true)),
       PosColumn(
-          text: "${state.cart.totolString}",
+          text: "\$${total.toString()}",
           width: 6,
           styles: PosStyles(bold: true)),
     ]);
@@ -171,24 +190,9 @@ class _PrintState extends State<Print> {
           width: 12,
           styles: PosStyles(bold: true)),
     ]);
-    ticket.text(
-      'Berzahlung:',
-      styles: PosStyles(
-          align: PosAlign.left,
-          height: PosTextSize.size2,
-          width: PosTextSize.size1),
-      linesAfter: 0,
-    );
-
-    ticket.feed(1);
-
-    ticket.text('POS purchase',
-        styles: PosStyles(align: PosAlign.left, bold: true));
-    ticket.feed(1);
-    ticket.text('Bergmannstrasse 27,',
-        styles: PosStyles(align: PosAlign.left, bold: true));
-    ticket.text('10961 Berlin, Germany',
-        styles: PosStyles(align: PosAlign.left, bold: true));
+    ticket.row([
+      PosColumn(text: '(MwSt: 7%)', width: 12, styles: PosStyles(bold: true)),
+    ]);
     ticket.feed(1);
     ticket.text('Steuernummer: 34/535/00093',
         styles: PosStyles(align: PosAlign.left, bold: true));

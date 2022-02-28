@@ -22,22 +22,25 @@ class SplashScreen extends StatelessWidget {
         children: [
           Center(
             child: CircleAvatar(
+              backgroundColor: Colors.white,
               radius: 100.sp,
               child: Image(
                 fit: BoxFit.cover,
-                image: AssetImage("images/pos.png"),
+                image: AssetImage("images/demo.png"),
               ),
             ),
           ),
           SizedBox(
             height: 10,
           ),
-          Text(
-            "Point Of Sale",
-            style: TextStyle(
-                color: Colors.white,
-                fontSize: 20.sp,
-                fontWeight: FontWeight.bold),
+          Center(
+            child: Text(
+              "Demo App",
+              style: TextStyle(
+                  color: Colors.amber,
+                  fontSize: 22.sp,
+                  fontWeight: FontWeight.bold),
+            ),
           ),
         ],
       ),

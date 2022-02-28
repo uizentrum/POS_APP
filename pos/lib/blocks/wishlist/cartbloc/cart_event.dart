@@ -1,5 +1,5 @@
 import 'package:equatable/equatable.dart';
-import 'package:tarka/model/models.dart';
+import 'package:pos/model/models.dart';
 
 abstract class CartEvent extends Equatable {
   const CartEvent();
@@ -18,7 +18,6 @@ class CartProductAdded extends CartEvent {
   CartProductAdded(this.product);
   @override
   List<Object> get props => [product];
-  
 }
 
 class CartProductRemoved extends CartEvent {

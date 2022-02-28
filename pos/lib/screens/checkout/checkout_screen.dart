@@ -1,19 +1,18 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:tarka/blocks/wishlist/cartbloc/cart_bloc.dart';
-import 'package:tarka/blocks/wishlist/cartbloc/cart_state.dart';
-import 'package:tarka/model/product_model.dart';
-import 'package:tarka/screens/print/print.dart';
-import 'package:tarka/widget/cart_productcard.dart';
-import 'package:tarka/widget/custom_appbar.dart';
-import 'package:tarka/widget/custom_navbar.dart';
+import 'package:pos/blocks/wishlist/cartbloc/cart_bloc.dart';
+import 'package:pos/blocks/wishlist/cartbloc/cart_state.dart';
+import 'package:pos/screens/print/print.dart';
+import 'package:pos/widget/cart_productcard.dart';
+import 'package:pos/widget/custom_appbar.dart';
+import 'package:pos/widget/custom_navbar.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CheckoutScreen extends StatelessWidget {
   static const String routeName = "/checkout";
 
-  const CheckoutScreen({
+  CheckoutScreen({
     Key? key,
   }) : super(key: key);
 
@@ -55,6 +54,7 @@ class CheckoutScreen extends StatelessWidget {
                                   .keys
                                   .length,
                               itemBuilder: (context, index) {
+                                
                                 return CartProductCard(
                                   product: state.cart
                                       .productQuantity(state.cart.products)
@@ -66,6 +66,58 @@ class CheckoutScreen extends StatelessWidget {
                                       .elementAt(index),
                                 );
                               }),
+                        ),
+                      ),
+                    ],
+                  ),
+                  Divider(
+                    thickness: 2,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      ElevatedButton(
+                        onPressed: () {
+                          final snackBar = SnackBar(
+                            duration: Duration(seconds: 1),
+                            backgroundColor: Colors.amber,
+                            content: Text(
+                              "Mwst:7% Applied",
+                              style: TextStyle(color: Colors.black),
+                            ),
+                          );
+                          ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                        },
+                        style: ElevatedButton.styleFrom(
+                          elevation: 8,
+                          primary: Colors.blueGrey,
+                          shape: RoundedRectangleBorder(),
+                        ),
+                        child: Text(
+                          "Mwst:7%",
+                          style: TextStyle(fontSize: 15, color: Colors.black),
+                        ),
+                      ),
+                      ElevatedButton(
+                        onPressed: () {
+                          final snackBar = SnackBar(
+                            duration: Duration(seconds: 1),
+                            backgroundColor: Colors.amber,
+                            content: Text(
+                              "Mwst:19% Applied",
+                              style: TextStyle(color: Colors.black),
+                            ),
+                          );
+                          ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                        },
+                        style: ElevatedButton.styleFrom(
+                          elevation: 8,
+                          primary: Colors.blueGrey,
+                          shape: RoundedRectangleBorder(),
+                        ),
+                        child: Text(
+                          "Mwst:19%",
+                          style: TextStyle(fontSize: 15, color: Colors.black),
                         ),
                       ),
                     ],
@@ -108,12 +160,16 @@ class CheckoutScreen extends StatelessWidget {
                             ),
                             child: Text('Print'),
                             onPressed: () {
-                              // print("$quantity");
+                              // print(
+                              //     "${state.cart.totolString}€+,mnmk,n,mn,mn,mn,m");
+
                               Navigator.push(
                                 context,
                                 MaterialPageRoute<CartState>(
                                     builder: (_) => Print(
                                           state: state.cart.products,
+                                          total: state.cart.totolString,
+                                          quantity: state.cart.qtyString,
                                         )),
                               );
                             },

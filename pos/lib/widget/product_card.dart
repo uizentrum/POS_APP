@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:tarka/blocks/wishlist/cartbloc/cart_bloc.dart';
-import 'package:tarka/blocks/wishlist/cartbloc/cart_event.dart';
-import 'package:tarka/blocks/wishlist/cartbloc/cart_state.dart';
-import 'package:tarka/model/product_model.dart';
+import 'package:pos/blocks/wishlist/cartbloc/cart_bloc.dart';
+import 'package:pos/blocks/wishlist/cartbloc/cart_event.dart';
+import 'package:pos/blocks/wishlist/cartbloc/cart_state.dart';
+import 'package:pos/model/product_model.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ProducutCard extends StatelessWidget {

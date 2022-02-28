@@ -1,5 +1,6 @@
 import 'package:equatable/equatable.dart';
-import 'package:tarka/model/product_model.dart';
+import 'package:pos/model/product_model.dart';
+import 'package:pos/screens/print/print.dart';
 
 class Cart extends Equatable {
   final List<Product> products;
@@ -9,20 +10,19 @@ class Cart extends Equatable {
   List<Object?> get props => [products];
 
   Map productQuantity(products) {
-    // print("My product added..................." + products.toString());
-
     var quantity = Map();
-
     products.forEach((product) {
       if (!quantity.containsKey(product)) {
         quantity[product] = 1;
       } else {
         quantity[product] += 1;
       }
+      // print("My product added..........quantity check ........." +
+      //     quantity.toString());
     });
     return quantity;
   }
- 
+
   double get subtotal =>
       products.fold(0, (total, current) => total + current.price);
 
@@ -38,8 +38,11 @@ class Cart extends Equatable {
     return subtotal + netPayable(subtotal);
   }
 
+ Map get qtyString => productQuantity(products);
+
   String get totolString => total(subtotal, netPayable).toStringAsFixed(2);
 
   String get subtotolString => subtotal.toStringAsFixed(2);
+
   String get netPayableString => netPayable(subtotal).toStringAsFixed(2);
 }

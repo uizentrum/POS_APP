@@ -1,14 +1,14 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:tarka/blocks/wishlist/cartbloc/cart_bloc.dart';
-import 'package:tarka/blocks/wishlist/cartbloc/cart_event.dart';
-import 'package:tarka/blocks/wishlist/cartbloc/cart_state.dart';
-import 'package:tarka/blocks/wishlist/wishlist_block.dart';
-import 'package:tarka/blocks/wishlist/wishlist_event.dart';
-import 'package:tarka/blocks/wishlist/wishlist_state.dart';
-import 'package:tarka/model/models.dart';
-import 'package:tarka/widget/widget.dart';
+import 'package:pos/blocks/wishlist/cartbloc/cart_bloc.dart';
+import 'package:pos/blocks/wishlist/cartbloc/cart_event.dart';
+import 'package:pos/blocks/wishlist/cartbloc/cart_state.dart';
+import 'package:pos/blocks/wishlist/wishlist_block.dart';
+import 'package:pos/blocks/wishlist/wishlist_event.dart';
+import 'package:pos/blocks/wishlist/wishlist_state.dart';
+import 'package:pos/model/models.dart';
+import 'package:pos/widget/widget.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ProductScreen extends StatelessWidget {
@@ -34,22 +34,20 @@ class ProductScreen extends StatelessWidget {
       body: Expanded(
         child: ListView(
           children: [
-            CarouselSlider(
-              options: CarouselOptions(
-                autoPlayAnimationDuration: Duration(milliseconds: 1),
-                aspectRatio: 1.5,
-                viewportFraction: 0.9,
-                enlargeStrategy: CenterPageEnlargeStrategy.height,
-                enlargeCenterPage: true,
-                enableInfiniteScroll: true,
-                autoPlay: true,
-              ),
-              items: [
-                HeroCarosuel(
-                  product: product,
-                ),
-              ],
+            Card(
+              color: Colors.blueGrey.shade100,
             ),
+            // CarouselSlider(
+            //   options: CarouselOptions(
+            //     aspectRatio: 0.5,
+            //     viewportFraction: 5,
+            //   ),
+            //   items: [
+            //     HeroCarosuel(
+            //       product: product,
+            //     ),
+            //   ],
+            // ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20.0),
               child: Stack(
@@ -77,6 +75,7 @@ class ProductScreen extends StatelessWidget {
                           children: [
                             Text(
                               product.name,
+                              maxLines: 2,
                               overflow: TextOverflow.ellipsis,
                               softWrap: false,
                               style: TextStyle(
