@@ -1,4 +1,4 @@
-import 'package:firebase_core/firebase_core.dart';
+// import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
@@ -12,11 +12,11 @@ import 'package:pos/config/theme.dart';
 import 'package:pos/screens/home/home_screen.dart';
 import 'package:pos/screens/screens.dart';
 import 'blocks/wishlist/cartbloc/cart_bloc.dart';
-import 'package:firebase_core/firebase_core.dart';
+// import 'package:firebase_core/firebase_core.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+  // await Firebase.initializeApp();
   // Bloc.observer = SimpleBlocObserver();
   RenderErrorBox.backgroundColor = Colors.amber;
   runApp(MyApp());
