@@ -59,8 +59,6 @@ class _PrintState extends State<Print> {
   void initState() {
     print(state);
     if (Platform.isAndroid) {
-      print(
-          "${quantity.toString()}+.....................................................quantity.");
       bluetoothManager.state.listen((
         val,
       ) {
@@ -161,6 +159,7 @@ class _PrintState extends State<Print> {
 
     for (var i = 0; i < widget.state.length; i++) {
       print(quantity.toString() + "...................................");
+
       ticket.text(widget.state[i].name);
       ticket.row([
         PosColumn(

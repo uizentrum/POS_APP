@@ -80,72 +80,85 @@ class HomeScreen extends StatelessWidget {
         ),
         body: Column(
           children: [
-            Text(
-              "Categories",
-              style: TextStyle(
-                  fontSize: 20,
-                  color: Colors.amber,
-                  fontWeight: FontWeight.bold),
-            ),
-
-            
-            Expanded(
-              flex: 2,
-              child: Container(
-                child: SingleChildScrollView(
-                  scrollDirection: Axis.vertical,
-                  child: Column(
-                    children: [
-                      CarouselSlider(
-                        options: CarouselOptions(
-                          aspectRatio: 5,
-                          viewportFraction: 0.95,
-                          // enlargeStrategy: CenterPageEnlargeStrateg
-                        ),
-                        items: Category.categories
-                            .map((category) => HeroCarosuel(category: category))
-                            .toList(),
-                      ),
-                      SectionTile(title: "Recommended"),
-                      ProductCarousel(
-                          products: Product.products
-                              .where((product) => product.isRecommended)
-                              .toList()),
-                      SectionTile(title: "Popular"),
-                      ProductCarousel(
-                          products: Product.products
-                              .where((product) => product.isPopular)
-                              .toList()),
-                      SectionTile(title: "Recently added"),
-                      ProductCarousel(
-                          products: Product.products
-                              .where(
-                                (product) => product.isRecentlyadded,
-                              )
-                              .toList()),
-                      SectionTile(title: "Drink"),
-                      ProductCarousel(
-                          products: Product.products
-                              .where((product) => product.isDrink)
-                              .toList()),
-                      SectionTile(title: "Vegan-Category"),
-                      ProductCarousel(
-                          products: Product.products
-                              .where(
-                                (product) => product.isRecentlyadded,
-                              )
-                              .toList()),
-                      SectionTile(title: "Snacks"),
-                      ProductCarousel(
-                        products: Product.products
-                            .where((product) => product.isDrink)
-                            .toList(),
-                      ),
-                    ],
-                  ),
-                ),
+            Container(
+              child: Text(
+                "Categories",
+                style: TextStyle(
+                    fontSize: 20,
+                    color: Colors.amber,
+                    fontWeight: FontWeight.bold),
+                textAlign: TextAlign.start,
               ),
             ),
+            Container(
+              child: CarouselSlider(
+                options: CarouselOptions(
+                  scrollDirection: Axis.vertical,
+                  aspectRatio: 6,
+                  viewportFraction: 1,
+                ),
+                items: Category.categories
+                    .map((category) => HeroCarosuel(category: category))
+                    .toList(),
+              ),
+            ),
+            // Expanded(
+            //   flex: 1,
+            //   child: Container(
+            //     child: SingleChildScrollView(
+            //       scrollDirection: Axis.vertical,
+            //       child: Column(
+            //         children: [
+            //           // CarouselSlider(
+            //           //   options: CarouselOptions(
+            //           //     scrollDirection: Axis.vertical,
+            //           //     aspectRatio: 6.5,
+            //           //     viewportFraction: 1,
+            //           //   ),
+            //           //   items: Category.categories
+            //           //       .map((category) => HeroCarosuel(category: category))
+            //           //       .toList(),
+            //           // ),
+            //           SectionTile(title: "Recommended"),
+            //           ProductCarousel(
+            //               products: Product.products
+            //                   .where((product) => product.isRecommended)
+            //                   .toList()),
+            //           SectionTile(title: "Popular"),
+            //           ProductCarousel(
+            //               products: Product.products
+            //                   .where((product) => product.isPopular)
+            //                   .toList()),
+            //           SectionTile(title: "Recently added"),
+            //           ProductCarousel(
+            //               products: Product.products
+            //                   .where(
+            //                     (product) => product.isRecentlyadded,
+            //                   )
+            //                   .toList()),
+            //           SectionTile(title: "Drink"),
+            //           ProductCarousel(
+            //               products: Product.products
+            //                   .where((product) => product.isDrink)
+            //                   .toList()),
+            //           SectionTile(title: "Vegan-Category"),
+            //           ProductCarousel(
+            //               products: Product.products
+            //                   .where(
+            //                     (product) => product.isRecentlyadded,
+            //                   )
+            //                   .toList()),
+            //           SectionTile(title: "Snacks"),
+            //           ProductCarousel(
+            //             products: Product.products
+            //                 .where((product) => product.isDrink)
+            //                 .toList(),
+            //           ),
+            //         ],
+            //       ),
+            //     ),
+            //   ),
+            // ),
           ],
         ),
       ),

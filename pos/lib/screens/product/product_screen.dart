@@ -128,7 +128,7 @@ class ProductScreen extends StatelessWidget {
       bottomNavigationBar: BottomAppBar(
         color: Color(0xff134b5f),
         child: Container(
-          height: 60.h,
+          height: 56.h,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [

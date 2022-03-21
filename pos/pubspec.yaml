@@ -18,15 +18,17 @@ dependencies:
   cupertino_icons: ^1.0.2
   carousel_slider: ^4.0.0
   flutter_bloc: ^7.0.0
+  
  
   esc_pos_bluetooth: ^0.2.8
   flutter_bluetooth_basic: ^0.1.5
   image: ^2.1.4
   shared_preferences: 2.0.5
   flutter_screenutil: ^5.2.0
-  get: ^4.6.1
-  firebase_core: ^1.2.1
-  cloud_firestore: ^2.2.1
+  get: 4.5.1
+  google_fonts: ^1.1.2
+  # firebase_core: ^1.2.1
+  # cloud_firestore: ^2.2.1
   
 
 dev_dependencies:

@@ -42,7 +42,7 @@ class CartProductCard extends StatelessWidget {
                 children: [
                   Text(
                     product.name,
-                    overflow: TextOverflow.ellipsis,
+                    // overflow: TextOverflow.ellipsis,
                     style: TextStyle(
                         color: Colors.black,
                         fontSize: 16.sp,

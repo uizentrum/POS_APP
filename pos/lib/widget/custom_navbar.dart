@@ -24,7 +24,7 @@ class CustomNavBar extends StatelessWidget {
       elevation: 8,
       color: Color(0xff134b5f),
       child: Container(
-        height: 55.h,
+        height: 58.h,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -232,7 +232,7 @@ class CustomNavBar extends StatelessWidget {
           shape: RoundedRectangleBorder(),
         ),
         child: Text(
-          "Go Back!",
+          "GO TO HOME!",
           style: TextStyle(fontSize: 15, color: Colors.black),
         ),
       ),

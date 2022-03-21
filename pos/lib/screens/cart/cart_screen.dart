@@ -74,12 +74,11 @@ class CartScreen extends StatelessWidget {
                           child: SizedBox(
                         height: 430.h,
                         child: state.cart == null
-                            ? Center(
-                                child: Text(
-                                "Cart is Empty",
-                                style: TextStyle(
-                                    fontSize: 20, color: Colors.amber),
-                              ))
+                            ? Text(
+                            "Cart is Empty",
+                            style: TextStyle(
+                                fontSize: 20, color: Colors.amber),
+                              )
                             : ListView.builder(
                                 itemCount: state.cart
                                     .productQuantity(state.cart.products)

@@ -24,26 +24,28 @@ class CatalogScreen extends StatelessWidget {
         .toList();
 
     return Scaffold(
-        backgroundColor: Colors.blueGrey.shade800,
-        appBar: CustomAppBar(title: category.name),
-        bottomNavigationBar: CustomNavBar(
-          screen: '/catalog',
-        ),
-        body: GridView.builder(
-            padding: EdgeInsets.symmetric(
-              horizontal: 8.h,
-              vertical: 16.w,
-            ),
-            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 2, childAspectRatio: 2.58),
-            itemCount: categoryProducts.length,
-            itemBuilder: (BuildContext context, int index) {
-              return Center(
-                child: ProducutCard(
-                  product: categoryProducts[index],
-                  widthFactor: 2.24,
-                ),
-              );
-            }));
+      backgroundColor: Colors.blueGrey.shade800,
+      appBar: CustomAppBar(title: category.name),
+      bottomNavigationBar: CustomNavBar(
+        screen: '/catalog',
+      ),
+      body: GridView.builder(
+          padding: EdgeInsets.symmetric(
+            horizontal: 8.h,
+            vertical: 16.w,
+          ),
+          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 2, childAspectRatio: 2.58),
+          itemCount: categoryProducts.length,
+          itemBuilder: (BuildContext context, int index) {
+            return Center(
+              child: ProducutCard(
+                product: categoryProducts[index],
+                widthFactor: 2.24,
+              ),
+            );
+          }),
+    );
   }
 }
+   
