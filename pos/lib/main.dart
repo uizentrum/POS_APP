@@ -1,9 +1,10 @@
+// import 'package:firebase_core/firebase_core.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:pos/blocks/wishlist/cartbloc/cart_event.dart';
 import 'package:pos/blocks/wishlist/wishlist_block.dart';
 import 'package:pos/blocks/wishlist/wishlist_event.dart';
@@ -12,9 +13,10 @@ import 'package:pos/config/theme.dart';
 import 'package:pos/screens/home/home_screen.dart';
 import 'package:pos/screens/screens.dart';
 import 'blocks/wishlist/cartbloc/cart_bloc.dart';
+// import 'package:firebase_core/firebase_core.dart';
 
 void main() async {
-  // WidgetsFlutterBinding.ensureInitialized();
+  WidgetsFlutterBinding.ensureInitialized();
   // await Firebase.initializeApp();
   // Bloc.observer = SimpleBlocObserver();
   RenderErrorBox.backgroundColor = Colors.amber;
@@ -33,9 +35,9 @@ class MyApp extends StatelessWidget {
         BlocProvider(create: (_) => WishlistBloc()..add(StarWishlist())),
       ],
       child: ScreenUtilInit(
-        builder: () => GetMaterialApp(
+        builder: () => MaterialApp(
           debugShowCheckedModeBanner: false,
-          // title: 'Arriba Mexico',
+          title: 'Arriba Mexico',
           theme: theme(),
           onGenerateRoute: AppRouter.onGenerateRoute,
           initialRoute: SplashScreen.routeName,
