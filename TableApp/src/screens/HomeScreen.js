@@ -10,7 +10,7 @@ import {
 import React from "react";
 import * as COLOR from "../components/Colors";
 import Title from "../components/Title";
-import * as TablesList from '../data/TablesList'
+import  *as TABLE from '../data/TablesList'
 
 
 const HomeScreen = ({ navigation }) => {
@@ -21,7 +21,7 @@ const HomeScreen = ({ navigation }) => {
           <Title title={'List of Tables'}/>
         </View>
         <FlatList
-          data={TablesList}
+          data={TABLE.TablesList}
           numColumns={2}
           //   horizontal
           keyExtractor={item => item.id}

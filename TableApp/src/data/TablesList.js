@@ -1,5 +1,5 @@
 
-const TablesList = [
+export const TablesList = [
     {
       id: "1",
       title: "Table 1",
