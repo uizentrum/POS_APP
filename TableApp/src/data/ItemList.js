@@ -52,7 +52,8 @@ const data = [
     }
   ];
 
-  Product(
+const MenuList =[{
+
     name: "Elotes",
     category: "Vorspeisen",
     price: 3.90,
@@ -60,8 +61,9 @@ const data = [
     isRecommended: true,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},
+{
+
     name: "Onionringe",
     category: "Vorspeisen",
     price: 7.50,
@@ -69,8 +71,8 @@ const data = [
     isRecommended: true,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},
+{
     name: "Chip con tres salas",
     category: " Vorspeisen",
     price: 5.90,
@@ -78,8 +80,8 @@ const data = [
     isRecommended: true,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},
+{
     name: "Nachos Arriba",
     category: "Vorspeisen",
     price: 6.90,
