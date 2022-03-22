@@ -13,7 +13,7 @@ export default Title
 
 const styles = StyleSheet.create({
     title:{
-        fontSize:30,
+        fontSize:20,
         fontWeight:'600'
 
     },
