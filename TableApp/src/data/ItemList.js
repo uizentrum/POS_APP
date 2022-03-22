@@ -1,56 +1,4 @@
 
-const data = [
-    {
-      id: "1",
-      title: "Table 1",
-      image: "https://img.icons8.com/doodle/96/000000/car--v1.png"
-    },
-    {
-      id: "2",
-      title: "Table 2",
-      image: "https://img.icons8.com/office/80/000000/kawaii-french-fries.png"
-    },
-    {
-      id: "3",
-      title: "Table 3",
-      image: "https://img.icons8.com/office/80/000000/kawaii-french-fries.png"
-    },
-    {
-      id: "4",
-      title: "Table 4",
-      image: "https://img.icons8.com/office/80/000000/kawaii-french-fries.png"
-    },
-    {
-      id: "5",
-      title: "Table 5",
-      image: "https://img.icons8.com/office/80/000000/kawaii-french-fries.png"
-    },
-    {
-      id: "6",
-      title: "Table 6",
-      image: "https://img.icons8.com/office/80/000000/kawaii-french-fries.png"
-    },
-    {
-      id: "7",
-      title: "Table 7",
-      image: "https://img.icons8.com/office/80/000000/kawaii-french-fries.png"
-    },
-    {
-      id: "8",
-      title: "Table 8",
-      image: "https://img.icons8.com/office/80/000000/kawaii-french-fries.png"
-    },
-    {
-      id: "9",
-      title: "Table 9",
-      image: "https://img.icons8.com/office/80/000000/kawaii-french-fries.png"
-    },
-    {
-      id: "10",
-      title: "Table 10",
-      image: "https://img.icons8.com/office/80/000000/kawaii-french-fries.png"
-    }
-  ];
 
 const MenuList =[{
 
@@ -89,8 +37,8 @@ const MenuList =[{
     isRecommended: true,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},
+  {
     name: "Nachos Mexicana",
     category: "Vorspeisen",
     price: 2.99,
@@ -98,8 +46,8 @@ const MenuList =[{
     isRecommended: true,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+  },
+  {
     name: "Nachos con pollo",
     category: "Vorspeisen",
     price: 7.50,
@@ -107,8 +55,8 @@ const MenuList =[{
     isRecommended: true,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+  },
+  {
     name: "Nachos con picadillo",
     category: " Vorspeisen",
     price: 7.50,
@@ -116,8 +64,8 @@ const MenuList =[{
     isRecommended: true,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+  },
+  {
     name: "Chilli chese Nuggets",
     category: "Vorspeisen",
     price: 7.50,
@@ -125,8 +73,8 @@ const MenuList =[{
     isRecommended: true,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+  },
+  {
     name: "Peppers Red Hot",
     category: "Vorspeisen",
     price: 7.50,
@@ -135,8 +83,8 @@ const MenuList =[{
     isRecentlyadded: true,
     isDrink: false,
     imaUrl: 'images/OIP.jpg',
-  ),
-  Product(
+  },
+  {
     name: "Buffalo-Chicken Wings",
     category: "Vorspeisen",
     price: 7.50,
@@ -144,8 +92,8 @@ const MenuList =[{
     isRecommended: true,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+  },
+  {
     name: "Mozzarella- Sticks",
     category: " Vorspeisen",
     price: 7.50,
@@ -153,8 +101,8 @@ const MenuList =[{
     isRecommended: true,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+  },
+  {
     name: "Peppers-Cheddar",
     category: "Vorspeisen",
     price: 7.50,
@@ -162,8 +110,8 @@ const MenuList =[{
     isRecommended: true,
     isRecentlyadded: true,
     isDrink: false,
-  ),
-  Product(
+  },
+  {
     name: "Scampi vom Grill",
     category: "Vorspeisen",
     price: 7.90,
@@ -172,8 +120,8 @@ const MenuList =[{
     isRecentlyadded: false,
     isDrink: false,
     imaUrl: 'images/OIP.jpg',
-  ),
-  Product(
+  },
+  {
     name: "Tex Mex Teller",
     category: "Vorspeisen",
     price: 8.50,
@@ -181,8 +129,8 @@ const MenuList =[{
     isRecommended: true,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+  },
+  {
     name: "Peppers Habaneros",
     category: " Vorspeisen",
     price: 8.50,
@@ -190,8 +138,8 @@ const MenuList =[{
     isRecommended: true,
     isRecentlyadded: true,
     isDrink: false,
-  ),
-  Product(
+  },
+  {
     name: "Mythra Teller",
     category: "Vorspeisen",
     price: 7.50,
@@ -199,8 +147,8 @@ const MenuList =[{
     isRecommended: true,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+  },
+  {
     name: "Cream de Elote",
     category: "Salad",
     price: 3.90,
@@ -209,8 +157,7 @@ const MenuList =[{
     isRecentlyadded: false,
     isDrink: false,
     imaUrl: 'images/OIP.jpg',
-  ),
-  Product(
+},{
     name: "Sopa de Pomodoro",
     category: "Salad",
     price: 3.90,
@@ -218,8 +165,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Chilli con Carne",
     category: " Salad",
     price: 4.50,
@@ -227,8 +173,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "El Goucho suppe",
     category: "Salad",
     price: 4.50,
@@ -236,8 +181,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Quesadillas Vegetariana",
     category: "Salad",
     price: 7.50,
@@ -245,8 +189,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Quesadillas con pollo",
     category: "Salad",
     price: 7.50,
@@ -254,8 +197,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Quesadillas con picadillo",
     category: "Salad",
     price: 7.90,
@@ -263,8 +205,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Quesadillas can Spinaci",
     category: "Salad",
     price: 7.50,
@@ -272,8 +213,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Quesadillas de Hongos",
     category: "Salad",
     price: 7.50,
@@ -281,8 +221,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Quesadillas arriba Mexico",
     category: "Salad",
     price: 7.90,
@@ -290,8 +229,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Ensalada Mixta",
     category: "Salad",
     price: 4.20,
@@ -299,8 +237,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Ensalada de Queso",
     category: "Salad",
     price: 4.90,
@@ -308,8 +245,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Ensalada de Atun",
     category: "Salad",
     price: 5.90,
@@ -317,8 +253,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Ensalada de Nopales",
     category: "Salad",
     price: 6.90,
@@ -326,8 +261,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Ensalada arriba Mexico",
     category: "Salad",
     price: 7.50,
@@ -335,8 +269,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Ensalada Ranchero",
     category: "Salad",
     price: 8.50,
@@ -344,8 +277,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Ensalada Australia",
     category: "Salad",
     price: 8.50,
@@ -353,8 +285,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "pfifferlingsauce",
     category: "Apetizer",
     price: 2.50,
@@ -362,8 +293,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: true,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Champignonsauce",
     category: "Apetizer",
     price: 2.50,
@@ -371,8 +301,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: true,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Grun Pfeffersauce",
     category: "Apetizer",
     price: 2.50,
@@ -380,8 +309,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: true,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Gorgonzolasauce",
     category: "Apetizer",
     price: 2.00,
@@ -389,8 +317,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: true,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Avacadocream",
     category: "Apetizer",
     price: 2.00,
@@ -398,8 +325,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: true,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Sauerrahm",
     category: "Apetizer",
     price: 2.00,
@@ -407,8 +333,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: true,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Salsa Raja",
     category: "Apetizer",
     price: 1.90,
@@ -416,8 +341,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: true,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Jalapenos",
     category: "Apetizer",
     price: 1.80,
@@ -425,8 +349,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: true,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Likore Amaretto ",
     category: "pos",
     price: 1.90,
@@ -434,8 +357,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: true,
-  ),
-  Product(
+},{
     name: "Baileys",
     category: "pos",
     price: 2.50,
@@ -443,8 +365,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: true,
-  ),
-  Product(
+},{
     name: "Southern Comfort",
     category: "pos",
     price: 3.50,
@@ -452,8 +373,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: true,
-  ),
-  Product(
+},{
     name: "Sambuca",
     category: "pos",
     price: 1.90,
@@ -461,8 +381,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: true,
-  ),
-  Product(
+},{
     name: "Batida de Coco",
     category: "pos",
     price: 1.90,
@@ -470,8 +389,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: true,
-  ),
-  Product(
+},{
     name: "Kahlua",
     category: "pos",
     price: 2.50,
@@ -479,8 +397,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: true,
-  ),
-  Product(
+},{
     name: "Osborne Veterano",
     category: "pos",
     price: 2.50,
@@ -488,8 +405,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: true,
-  ),
-  Product(
+},{
     name: "Asbach Uralt",
     category: "pos",
     price: 2.20,
@@ -497,8 +413,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: true,
-  ),
-  Product(
+},{
     name: "Jacobi 1860 V.S.O.P",
     category: "pos",
     price: 2.20,
@@ -506,8 +421,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: true,
-  ),
-  Product(
+},{
     name: "Cardenal Mendoza",
     category: "pos",
     price: 4.50,
@@ -515,8 +429,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: true,
-  ),
-  Product(
+},{
     name: "Carlos 1",
     category: "pos",
     price: 4.50,
@@ -524,8 +437,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: true,
-  ),
-  Product(
+},{
     name: "Remy Martin V.S.O.P.",
     category: "pos",
     price: 4.50,
@@ -533,8 +445,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: true,
-  ),
-  Product(
+},{
     name: "Metaxa ****",
     category: "pos",
     price: 3.50,
@@ -542,8 +453,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: true,
-  ),
-  Product(
+},{
     name: "Calvados Papidoux",
     category: "pos",
     price: 2.90,
@@ -551,8 +461,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: true,
-  ),
-  Product(
+},{
     name: "Olmeca Tequila Blanco",
     category: "pos",
     price: 2.50,
@@ -560,8 +469,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: true,
-  ),
-  Product(
+},{
     name: "Olmeca Tequila Reposado",
     category: "pos",
     price: 2.50,
@@ -569,8 +477,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: true,
-  ),
-  Product(
+},{
     name: "Sierra Tequila Silver",
     category: "pos",
     price: 2.20,
@@ -578,8 +485,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: true,
-  ),
-  Product(
+},{
     name: "Sierra Tequila Reposado",
     category: "pos",
     price: 2.20,
@@ -587,8 +493,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: true,
-  ),
-  Product(
+},{
     name: "Sierra Tequila Antiguo",
     category: "pos",
     price: 3.50,
@@ -596,8 +501,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: true,
-  ),
-  Product(
+},{
     name: "Sierra Tequila Plata",
     category: "pos",
     price: 3.50,
@@ -605,8 +509,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: true,
-  ),
-  Product(
+},{
     name: "Sierra Tequila Milinario Extra Añejo",
     category: "pos",
     price: 5.00,
@@ -614,8 +517,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: true,
-  ),
-  Product(
+},{
     name: "EL Jimador Blanco",
     category: "pos",
     price: 2.50,
@@ -623,8 +525,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: true,
-  ),
-  Product(
+},{
     name: "EL Jimador Reposado",
     category: "pos",
     price: 2.50,
@@ -632,8 +533,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: true,
-  ),
-  Product(
+},{
     name: "Fürst Bismarck",
     category: "pos",
     price: 2.20,
@@ -641,8 +541,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: true,
-  ),
-  Product(
+},{
     name: "Grappa",
     category: "pos",
     price: 1.80,
@@ -650,8 +549,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: true,
-  ),
-  Product(
+},{
     name: "Williamsbirne",
     category: "pos",
     price: 1.80,
@@ -659,8 +557,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: true,
-  ),
-  Product(
+},{
     name: "Whiskey Johnnie Walker Red",
     category: "pos",
     price: 2.50,
@@ -668,8 +565,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: true,
-  ),
-  Product(
+},{
     name: "Johnnie Walker black",
     category: "pos",
     price: 3.50,
@@ -677,8 +573,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: true,
-  ),
-  Product(
+},{
     name: "Ballanties",
     category: "pos",
     price: 2.50,
@@ -686,8 +581,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: true,
-  ),
-  Product(
+},{
     name: "The Glenlivet",
     category: "pos",
     price: 3.80,
@@ -695,8 +589,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: true,
-  ),
-  Product(
+},{
     name: "Chivas Regal",
     category: "pos",
     price: 3.80,
@@ -704,8 +597,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: true,
-  ),
-  Product(
+},{
     name: "jim Beam",
     category: "pos",
     price: 2.50,
@@ -713,8 +605,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: true,
-  ),
-  Product(
+},{
     name: "jack Danniels",
     category: "pos",
     price: 3.50,
@@ -722,8 +613,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: true,
-  ),
-  Product(
+},{
     name: "James Irisch Wishkey",
     category: "pos",
     price: 2.50,
@@ -731,8 +621,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: true,
-  ),
-  Product(
+},{
     name: "Jack Danniel Honey",
     category: "pos",
     price: 3.80,
@@ -740,8 +629,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: true,
-  ),
-  Product(
+},{
     name: "Vodka Absolute Vodka",
     category: "pos",
     price: 2.50,
@@ -749,8 +637,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: true,
-  ),
-  Product(
+},{
     name: "Vodka Gorbatschow",
     category: "pos",
     price: 2.20,
@@ -758,8 +645,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: true,
-  ),
-  Product(
+},{
     name: "Parliment Vodka",
     category: "pos",
     price: 2.20,
@@ -767,8 +653,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: true,
-  ),
-  Product(
+},{
     name: "Finlandia",
     category: "pos",
     price: 2.50,
@@ -776,8 +661,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: true,
-  ),
-  Product(
+},{
     name: "Long Barcadi Cola",
     category: "pos",
     price: 6.90,
@@ -785,8 +669,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: true,
-  ),
-  Product(
+},{
     name: "Gin Tonic",
     category: "pos",
     price: 6.90,
@@ -794,8 +677,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: true,
-  ),
-  Product(
+},{
     name: "Vodka Lemon",
     category: "pos",
     price: 6.90,
@@ -803,8 +685,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: true,
-  ),
-  Product(
+},{
     name: "Burrito de Verduras",
     category: "Apetizer",
     price: 9.20,
@@ -812,8 +693,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Burrito de Pollo",
     category: "Apetizer",
     price: 9.50,
@@ -821,8 +701,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Burrito de Picadillo",
     category: "Apetizer",
     price: 9.50,
@@ -830,8 +709,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Burrito de Pescado",
     category: "Apetizer",
     price: 9.20,
@@ -839,8 +717,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Tacos Arriba",
     category: "Apetizer",
     price: 9.50,
@@ -848,8 +725,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Tacos con pollo",
     category: "Apetizer",
     price: 9.50,
@@ -857,8 +733,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Tacos con picadillo",
     category: "Apetizer",
     price: 9.50,
@@ -866,8 +741,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Tacos con Verduras",
     category: "Apetizer",
     price: 9.20,
@@ -875,8 +749,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Burrito de Espinacas",
     category: "Apetizer",
     price: 9.50,
@@ -884,8 +757,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Chicken chilli",
     category: "MainCourse",
     price: 10.90,
@@ -893,8 +765,7 @@ const MenuList =[{
     isRecommended: true,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Chicken Madras",
     category: "MainCourse",
     price: 10.90,
@@ -902,8 +773,7 @@ const MenuList =[{
     isRecommended: true,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Chicken Himalya",
     category: "MainCourse",
     price: 10.90,
@@ -911,8 +781,7 @@ const MenuList =[{
     isRecommended: true,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Chicken Mango",
     category: "MainCourse",
     price: 10.90,
@@ -920,8 +789,7 @@ const MenuList =[{
     isRecommended: true,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Lamm lahori",
     category: "MainCourse",
     price: 13.90,
@@ -929,8 +797,7 @@ const MenuList =[{
     isRecommended: true,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Lamm Vindalo",
     category: "MainCourse",
     price: 13.90,
@@ -938,8 +805,7 @@ const MenuList =[{
     isRecommended: true,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Lamm Myhtra",
     category: "MainCourse",
     price: 13.90,
@@ -947,8 +813,7 @@ const MenuList =[{
     isRecommended: true,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Lamm Mango",
     category: "MainCourse",
     price: 13.90,
@@ -956,8 +821,7 @@ const MenuList =[{
     isRecommended: true,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Hüftsteak 200g**",
     category: "Hauptegricht Steaks",
     price: 12.90,
@@ -965,8 +829,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Hüftsteak 300g**",
     category: "Hauptegricht Steaks",
     price: 15.90,
@@ -974,8 +837,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Hüftsteak 400g**",
     category: "Hauptegricht Steaks",
     price: 18.90,
@@ -983,8 +845,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Entrecôte 200g**",
     category: "Hauptegricht Steaks",
     price: 14.90,
@@ -992,8 +853,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Entrecôte 300g**",
     category: "Hauptegricht Steaks",
     price: 18.90,
@@ -1001,8 +861,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Entrecôte 400g**",
     category: "Hauptegricht Steaks",
     price: 21.90,
@@ -1010,8 +869,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Rumpsteak 200g**",
     category: "Hauptegricht Steaks",
     price: 14.90,
@@ -1019,8 +877,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Rumpsteak 300g**",
     category: "Hauptegricht Steaks",
     price: 18.90,
@@ -1028,8 +885,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Rumpsteak 400g**",
     category: "Hauptegricht Steaks",
     price: 21.90,
@@ -1037,8 +893,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Filetsteak 200g**",
     category: "Hauptegricht Steaks",
     price: 18.90,
@@ -1046,8 +901,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Filetsteak 300g**",
     category: "Hauptegricht Steaks",
     price: 24.90,
@@ -1055,8 +909,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Filetsteak 400g**",
     category: "Hauptegricht Steaks",
     price: 30.90,
@@ -1064,8 +917,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Pfeffersteak vom Rind 200g**",
     category: "Hauptegricht Steaks",
     price: 13.90,
@@ -1073,8 +925,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Pfeffersteak vom Rind 300g**",
     category: "Hauptegricht Steaks",
     price: 16.90,
@@ -1082,8 +933,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Pfeffersteak vom Rind 400g**",
     category: "Hauptegricht Steaks",
     price: 19.90,
@@ -1091,8 +941,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Rostbraten 200g**",
     category: "Hauptegricht Steaks",
     price: 13.90,
@@ -1100,8 +949,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Rostbraten 300g**",
     category: "Hauptegricht Steaks",
     price: 16.90,
@@ -1109,8 +957,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Rostbraten 400g**",
     category: "Hauptegricht Steaks",
     price: 19.90,
@@ -1118,8 +965,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Lammfilet 200g**",
     category: "Hauptegricht Steaks",
     price: 14.90,
@@ -1127,8 +973,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Lammfilet 300g**",
     category: "Hauptegricht Steaks",
     price: 18.90,
@@ -1136,8 +981,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Lammfilet 400g**",
     category: "Hauptegricht Steaks",
     price: 21.90,
@@ -1145,8 +989,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Pfifferlingsauce",
     category: "Acompanamientos Beilagen & Saucen",
     price: 2.50,
@@ -1154,8 +997,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Champignonsauce",
     category: "Acompanamientos Beilagen & Saucen",
     price: 2.50,
@@ -1163,8 +1005,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Grüne Pfeffersauce",
     category: "Acompanamientos Beilagen & Saucen",
     price: 2.50,
@@ -1172,8 +1013,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Gorgonzolasauce",
     category: "Acompanamientos Beilagen & Saucen",
     price: 2.50,
@@ -1181,8 +1021,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Avocadocréme",
     category: "Acompanamientos Beilagen & Saucen",
     price: 2.00,
@@ -1190,8 +1029,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Sauerrahm",
     category: "Acompanamientos Beilagen & Saucen",
     price: 2.00,
@@ -1199,8 +1037,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Salsa Roja",
     category: "Acompanamientos Beilagen & Saucen",
     price: 1.90,
@@ -1208,8 +1045,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Jalapeños",
     category: "Acompanamientos Beilagen & Saucen",
     price: 1.80,
@@ -1217,8 +1053,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Pommes frites",
     category: "Acompanamientos Beilagen & Saucen",
     price: 2.20,
@@ -1226,8 +1061,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Kroketten",
     category: "Acompanamientos Beilagen & Saucen",
     price: 2.20,
@@ -1235,8 +1069,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Backkartoffel",
     category: "Acompanamientos Beilagen & Saucen",
     price: 2.90,
@@ -1244,8 +1077,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Bratkartoffeln",
     category: "Acompanamientos Beilagen & Saucen",
     price: 2.60,
@@ -1253,8 +1085,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Patatas fritas",
     category: "Acompanamientos Beilagen & Saucen",
     price: 2.20,
@@ -1262,8 +1093,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Manioc",
     category: "Acompanamientos Beilagen & Saucen",
     price: 2.50,
@@ -1271,8 +1101,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Frojoles",
     category: "Acompanamientos Beilagen & Saucen",
     price: 2.90,
@@ -1280,8 +1109,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Champignonpfanne",
     category: "Acompanamientos Beilagen & Saucen",
     price: 3.50,
@@ -1289,8 +1117,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Röstzwiebeln",
     category: "Acompanamientos Beilagen & Saucen",
     price: 1.90,
@@ -1298,8 +1125,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Grüne Bohnen",
     category: "Acompanamientos Beilagen & Saucen",
     price: 2.90,
@@ -1307,8 +1133,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "mexikanisches Verduras",
     category: "Acompanamientos Beilagen & Saucen",
     price: 3.50,
@@ -1316,8 +1141,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Kräuterbutter",
     category: "Acompanamientos Beilagen & Saucen",
     price: 1.50,
@@ -1325,8 +1149,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Arriba - Brot",
     category: "Acompanamientos Beilagen & Saucen",
     price: 0.30,
@@ -1334,8 +1157,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Arroz",
     category: "Acompanamientos Beilagen & Saucen",
     price: 2.00,
@@ -1343,8 +1165,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Grilltomate",
     category: "Acompanamientos Beilagen & Saucen",
     price: 1.50,
@@ -1352,8 +1173,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Broccoli",
     category: "Acompanamientos Beilagen & Saucen",
     price: 2.50,
@@ -1361,8 +1181,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Extra Käse",
     category: "Acompanamientos Beilagen & Saucen",
     price: 1.50,
@@ -1370,8 +1189,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Beilagesalat",
     category: "Acompanamientos Beilagen & Saucen",
     price: 1.50,
@@ -1379,8 +1197,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Bacon",
     category: "Acompanamientos Beilagen & Saucen",
     price: 1.50,
@@ -1388,8 +1205,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Pechugas alla Parilla",
     category: "Arriba- Spezialitäten",
     price: 9.90,
@@ -1397,8 +1213,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Pechugas poblano",
     category: "Arriba- Spezialitäten",
     price: 10.90,
@@ -1406,8 +1221,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Pollo con Pina",
     category: "Arriba- Spezialitäten",
     price: 10.90,
@@ -1415,8 +1229,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Mole Verde á la Petitas",
     category: "Arriba- Spezialitäten",
     price: 10.90,
@@ -1424,8 +1237,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Mole Rojo de Cacahuate ",
     category: "Arriba- Spezialitäten",
     price: 11.90,
@@ -1433,8 +1245,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "200g** Bistec Ranchero",
     category: "Arriba- Spezialitäten",
     price: 13.90,
@@ -1442,8 +1253,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Costillas 500g**",
     category: "Arriba- Spezialitäten",
     price: 11.50,
@@ -1451,8 +1261,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Fileto de Cerdo 200g**",
     category: "Arriba- Spezialitäten",
     price: 12.90,
@@ -1460,8 +1269,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "200g** Bistec Arriba Mexico",
     category: "Arriba- Spezialitäten",
     price: 13.90,
@@ -1469,8 +1277,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "200g** Steak nach Art des Hauses",
     category: "Arriba- Spezialitäten",
     price: 14.90,
@@ -1478,8 +1285,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "200g** Mexico-Steak",
     category: "Arriba- Spezialitäten",
     price: 11.90,
@@ -1487,8 +1293,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Arriba Mexico-Grillteller",
     category: "Arriba- Spezialitäten",
     price: 14.90,
@@ -1496,8 +1301,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Cerdo Almendrado",
     category: "Arriba- Spezialitäten",
     price: 11.90,
@@ -1505,8 +1309,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Puntas Res a la Mexicana",
     category: "Arriba- Spezialitäten",
     price: 12.90,
@@ -1514,8 +1317,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Filetto Mexicano",
     category: "Arriba- Spezialitäten",
     price: 16.90,
@@ -1523,8 +1325,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Tres Muchachos",
     category: "Arriba- Spezialitäten",
     price: 17.90,
@@ -1532,8 +1333,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Grillplatte für 2 Personen",
     category: "Arriba- Spezialitäten",
     price: 30.90,
@@ -1541,8 +1341,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Fajitas de Pollo",
     category: "Faitajs",
     price: 12.50,
@@ -1550,8 +1349,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Fajitas de Carne",
     category: "Faitajs",
     price: 13.50,
@@ -1559,8 +1357,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Fajitas de Cerdo",
     category: "Faitajs",
     price: 11.50,
@@ -1568,8 +1365,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Fajitas Combinadas",
     category: "Faitajs",
     price: 14.50,
@@ -1577,8 +1373,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Fajitas Vegetarian",
     category: "Faitajs",
     price: 10.50,
@@ -1586,8 +1381,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Fajitas Camarones",
     category: "Faitajs",
     price: 15.50,
@@ -1595,8 +1389,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Chicken- Burger",
     category: "Spezial Burger (125g.)",
     price: 6.50,
@@ -1604,8 +1397,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Hamburger",
     category: "Spezial Burger (125g.)",
     price: 6.50,
@@ -1613,8 +1405,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Cheese-Burger",
     category: "Spezial Burger (125g.)",
     price: 7.50,
@@ -1622,8 +1413,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Texas Chili-Burger",
     category: "Spezial Burger (125g.)",
     price: 7.50,
@@ -1631,8 +1421,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Bacon-Burger ",
     category: "Spezial Burger (125g.)",
     price: 7.50,
@@ -1640,8 +1429,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Mexican-Burger",
     category: "Spezial Burger (125g.)",
     price: 7.90,
@@ -1649,8 +1437,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: " Arriba Mexico-Burger",
     category: "Spezial Burger (125g.)",
     price: 9.50,
@@ -1658,8 +1445,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Gigant Burger",
     category: "Gigant Burger (227g.)",
     price: 9.50,
@@ -1667,8 +1453,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Gigant-Cheese-Burger",
     category: "Gigant Burger (227g.)",
     price: 11.50,
@@ -1676,8 +1461,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Gigant-Mexican-Burger",
     category: "Gigant Burger (227g.)",
     price: 12.90,
@@ -1685,8 +1469,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Gigant-Bacon-Burger",
     category: "Gigant Burger (227g.)",
     price: 12.50,
@@ -1694,8 +1477,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Pasta Mexicana",
     category: "Pasta",
     price: 6.50,
@@ -1703,8 +1485,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Shrimps & Veggie Pasta",
     category: "Pasta",
     price: 6.90,
@@ -1712,8 +1493,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Beef-Carne",
     category: "Pasta",
     price: 6.90,
@@ -1721,8 +1501,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Pasta Primavera",
     category: "Pasta",
     price: 6.50,
@@ -1730,8 +1509,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Pasta Chicken",
     category: "Pasta",
     price: 6.50,
@@ -1739,8 +1517,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Pasta California",
     category: "Pasta",
     price: 6.90,
@@ -1748,8 +1525,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Pasta Chorico",
     category: "Pasta",
     price: 6.90,
@@ -1757,8 +1533,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Pasta Camerones",
     category: "Pasta",
     price: 7.50,
@@ -1766,8 +1541,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Pasta Meryanos",
     category: "Pasta",
     price: 7.50,
@@ -1775,8 +1549,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Pasta Mythra",
     category: "Pasta",
     price: 6.90,
@@ -1784,8 +1557,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Pasta Kamalas",
     category: "Pasta",
     price: 6.90,
@@ -1793,8 +1565,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Pasta Salas",
     category: "Pasta",
     price: 5.90,
@@ -1802,8 +1573,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Camarones Mexicana",
     category: "Pescado-Fischgerichte",
     price: 14.90,
@@ -1811,8 +1581,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Fischpfanne",
     category: "Pescado-Fischgerichte",
     price: 13.90,
@@ -1820,8 +1589,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Salmone con Nopales",
     category: "Pescado-Fischgerichte",
     price: 13.50,
@@ -1829,8 +1597,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Salmone al Tequila",
     category: "Pescado-Fischgerichte",
     price: 13.50,
@@ -1838,8 +1605,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: " Salmone California",
     category: "Pescado-Fischgerichte",
     price: 13.50,
@@ -1847,8 +1613,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Junior Burger",
     category: "Kinder-Menü",
     price: 4.50,
@@ -1856,8 +1621,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Crazy Chicken",
     category: "Kinder-Menü",
     price: 4.50,
@@ -1865,8 +1629,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Chicken Nuggets",
     category: "Kinder-Menü",
     price: 4.50,
@@ -1874,8 +1637,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Pasta Chicken",
     category: "Kinder-Menü",
     price: 4.50,
@@ -1883,8 +1645,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Mini-Hüftsteak 120g**",
     category: "Für den kleinen Hunger",
     price: 8.50,
@@ -1892,8 +1653,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Lady-Filetsteak 120g**",
     category: "Für den kleinen Hunger",
     price: 12.50,
@@ -1901,8 +1661,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Espresso",
     category: "Getränke-Hot pos",
     price: 1.90,
@@ -1910,8 +1669,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Espresso Macchiato",
     category: "Getränke-Hot pos",
     price: 2.50,
@@ -1919,8 +1677,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "doppelter Espresso",
     category: "Getränke-Hot pos",
     price: 3.20,
@@ -1928,8 +1685,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Café Crème",
     category: "Getränke-Hot pos",
     price: 2.50,
@@ -1937,8 +1693,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Milchkaffee",
     category: "Getränke-Hot pos",
     price: 3.20,
@@ -1946,8 +1701,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Cappuccino",
     category: "Getränke-Hot pos",
     price: 2.90,
@@ -1955,8 +1709,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Amaretto Cappuccino",
     category: "Getränke-Hot pos",
     price: 3.90,
@@ -1964,8 +1717,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Bailays Cappuccino",
     category: "Getränke-Hot pos",
     price: 3.90,
@@ -1973,8 +1725,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Latte Macchiato",
     category: "Getränke-Hot pos",
     price: 3.20,
@@ -1982,8 +1733,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Mexican Kaffee",
     category: "Getränke-Hot pos",
     price: 4.90,
@@ -1991,8 +1741,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "BIO FRÜCHTE NATUR",
     category: "Getränke-Hot pos",
     price: 2.90,
@@ -2000,8 +1749,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "BIO GRÜNTEE JASMIN Blatt",
     category: "Getränke-Hot pos",
     price: 2.90,
@@ -2009,8 +1757,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "English Select Ceylon Orange PEKOE blatt",
     category: "Getränke-Hot pos",
     price: 2.90,
@@ -2018,8 +1765,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "PFEFFERMINZBLÄTTER",
     category: "Getränke-Hot pos",
     price: 2.90,
@@ -2027,8 +1773,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "KAMILLENBLÜTEN",
     category: "Getränke-Hot pos",
     price: 2.90,
@@ -2036,8 +1781,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Chai Latte Classic",
     category: "Getränke-Hot pos",
     price: 3.90,
@@ -2045,8 +1789,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Schoko Chai Latte",
     category: "Getränke-Hot pos",
     price: 3.90,
@@ -2054,8 +1797,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Glühwein",
     category: "Getränke-Hot pos",
     price: 2.90,
@@ -2063,8 +1805,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Grog",
     category: "Getränke-Hot pos",
     price: 3.50,
@@ -2072,8 +1813,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Barcadi & Cola",
     category: "Long pos",
     price: 6.90,
@@ -2081,8 +1821,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Gin-Tonic³",
     category: "Long pos",
     price: 6.90,
@@ -2090,8 +1829,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Whisky-Cola",
     category: "Long pos",
     price: 6.90,
@@ -2099,8 +1837,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Wodka-Lemon",
     category: "Long pos",
     price: 6.90,
@@ -2108,8 +1845,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Southern-Ginger",
     category: "Long pos",
     price: 6.90,
@@ -2117,8 +1853,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Batida-Kirsch",
     category: "Long pos",
     price: 6.90,
@@ -2126,8 +1861,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Cuba Libre",
     category: "Long pos",
     price: 6.90,
@@ -2135,8 +1869,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Campari",
     category: "Long pos",
     price: 6.90,
@@ -2144,8 +1877,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Red Bull-Wodka",
     category: "Long pos",
     price: 6.90,
@@ -2153,8 +1885,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Red Bull-Prosecco",
     category: "Long pos",
     price: 6.90,
@@ -2162,8 +1893,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Red Bull-Campari",
     category: "Long pos",
     price: 6.90,
@@ -2171,8 +1901,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Sierra Tequila Silver Palomo",
     category: "Long pos",
     price: 6.90,
@@ -2180,8 +1909,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Henkell Trocken Piccolo(Fl. 0.2l)",
     category: "Long pos",
     price: 4.50,
@@ -2189,8 +1917,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Henkell Trocken(Fl. 0.75l)",
     category: "Long pos",
     price: 18.00,
@@ -2198,8 +1925,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Concha y Toro(CHILENISCH)-Fl. 0.75l",
     category: "Long pos",
     price: 14.90,
@@ -2207,8 +1933,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Concha y Toro(CHILENISCH)Blance-Fl. 0.75l",
     category: "Long pos",
     price: 14.90,
@@ -2216,8 +1941,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "L.A. Cetto rot(MEXIKANISCH)-Fl. 0.75l",
     category: "Long pos",
     price: 15.90,
@@ -2225,8 +1949,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "L.A. Cetto weiß(MEXIKANISCH)-Fl. 0.75l",
     category: "Long pos",
     price: 15.90,
@@ -2234,8 +1957,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Concha y Toro(Offene Weine)-0.2l",
     category: "Long pos",
     price: 3.90,
@@ -2243,8 +1965,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Concha y Toro(Offene Weine)-0.5l",
     category: "Long pos",
     price: 7.90,
@@ -2252,8 +1973,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Concha y Toro(Sauvignon Blanc)-0.2l",
     category: "Long pos",
     price: 3.90,
@@ -2261,8 +1981,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Concha y Toro(Sauvignon Blanc)-0.5l",
     category: "Long pos",
     price: 7.90,
@@ -2270,8 +1989,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Concha y Toro Rosé -0.2l",
     category: "Long pos",
     price: 3.90,
@@ -2279,8 +1997,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Concha y Toro Rosé-0.5l",
     category: "Long pos",
     price: 7.90,
@@ -2288,8 +2005,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Dunviro Rioja(Spanischer Rotwein)-0.2l",
     category: "Long pos",
     price: 3.90,
@@ -2297,8 +2013,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Dunviro Rioja(Spanischer Rotwein)-0.5l",
     category: "Long pos",
     price: 7.90,
@@ -2306,8 +2021,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Dunviro Rioja(Spanischer Weißwein trocken)-0.2l",
     category: "Long pos",
     price: 3.90,
@@ -2315,8 +2029,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Dunviro Rioja(Spanischer Weißwein trocken)-0.5l",
     category: "Long pos",
     price: 7.90,
@@ -2324,8 +2037,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Lambrusco(Italienischer Perlwein,mild und süß)-0.2l",
     category: "Long pos",
     price: 3.50,
@@ -2333,8 +2045,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Lambrusco(Italienischer Perlwein,mild und süß)-0.5l",
     category: "Long pos",
     price: 7.90,
@@ -2342,8 +2053,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Sangria(Weinhaltiges Getränk mit Früchten)-0.2l",
     category: "Long pos",
     price: 3.50,
@@ -2351,8 +2061,7 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
-  Product(
+},{
     name: "Weinschorle(Weinhaltiges Getränk)-0.2l",
     category: "Long pos",
     price: 3.50,
@@ -2360,5 +2069,5 @@ const MenuList =[{
     isRecommended: false,
     isRecentlyadded: false,
     isDrink: false,
-  ),
+}
 ];
