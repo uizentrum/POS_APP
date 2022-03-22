@@ -18,7 +18,7 @@ const Category = ({ navigation, route }) => {
       <View>
         <View>
         <Title  title={'Categories list'}/>
-        
+
         </View>
         <View style={styles.menuContainer}>
       <Title  title={'Menu List'}/>
@@ -27,10 +27,10 @@ const Category = ({ navigation, route }) => {
             data={MENU.MenuList}
             numColumns={2}
             showsVerticalScrollIndicator={false}
-            //   keyExtractor={item => item.name}
+              keyExtractor={item => item.name}
             renderItem={({ item }) =>
               <TouchableOpacity
-                onPress={() => navigation.navigate("Categories", { item })}
+                onPress={() => null}
               >
                 <View style={styles.menuView}>
                   <MenuList value={item.name} price={item.price} />

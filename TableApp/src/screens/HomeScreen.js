@@ -11,7 +11,7 @@ import React from "react";
 import * as COLOR from "../components/Colors";
 import Title from "../components/Title";
 import  *as TABLE from '../data/TablesList'
-// import Icon from 'react-native-vector-icons/FontAwesome';
+import Icon from 'react-native-vector-icons/EvilIcons';
 
 
 const HomeScreen = ({ navigation }) => {
@@ -20,6 +20,7 @@ const HomeScreen = ({ navigation }) => {
       <View style={styles.container}>
         <View>
           <Title title={'List of Tables'}/>
+          <Icon name="rocket" size={30} color="#900" />
         </View>
         <FlatList
           data={TABLE.TablesList}
@@ -39,7 +40,7 @@ const HomeScreen = ({ navigation }) => {
             </TouchableOpacity>}
         />
       </View>
-      {/* <Icon name="rocket" size={30} color="#900" />; */}
+     
     </SafeAreaView>
   );
 };
