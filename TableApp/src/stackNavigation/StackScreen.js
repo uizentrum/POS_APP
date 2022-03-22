@@ -14,10 +14,9 @@ const StackScreen = () => {
         headerShown: false
       }}
     >
-      <Stack.Screen name="Categories" component={Category} />
-
       <Stack.Screen name="Home" component={HomeScreen} />
       <Stack.Screen name="Cart" component={CartScreen} />
+      <Stack.Screen name="Categories" component={Category} />
 
       <Stack.Screen name="Print" component={PrintScreen} />
     </Stack.Navigator>
