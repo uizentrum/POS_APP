@@ -2283,7 +2283,7 @@ class Product extends Equatable {
       isRecentlyadded: false,
       isDrink: false,
     ),
-    Product(
+    Product( 
       name: "Concha y Toro Rosé-0.5l",
       category: "Long Drinks",
       price: 7.90,

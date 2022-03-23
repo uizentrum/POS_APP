@@ -250,253 +250,253 @@ export const ItemList = [
   {
     id: 141,
     name: "Likore Amaretto ",
-    status: "pos",
+    status: "Drinks",
     price: 1.9
   },
   {
     id: 142,
     name: "Baileys",
-    status: "pos",
+    status: "Drinks",
     price: 2.5
   },
   {
     id: 143,
     name: "Southern Comfort",
-    status: "pos",
+    status: "Drinks",
     price: 3.5
   },
   {
     id: 144,
     name: "Sambuca",
-    status: "pos",
+    status: "Drinks",
     price: 1.9
   },
   {
     id: 145,
     name: "Batida de Coco",
-    status: "pos",
+    status: "Drinks",
     price: 1.9
   },
   {
     id: 146,
     name: "Kahlua",
-    status: "pos",
+    status: "Drinks",
     price: 2.5
   },
   {
     id: 147,
     name: "Osborne Veterano",
-    status: "pos",
+    status: "Drinks",
     price: 2.5
   },
   {
     id: 148,
     name: "Asbach Uralt",
-    status: "pos",
+    status: "Drinks",
     price: 2.2
   },
   {
     id: 149,
     name: "Jacobi 1860 V.S.O.P",
-    status: "pos",
+    status: "Drinks",
     price: 2.2
   },
   {
     id: 150,
     name: "Cardenal Mendoza",
-    status: "pos",
+    status: "Drinks",
     price: 4.5
   },
   {
     id: 151,
     name: "Carlos 1",
-    status: "pos",
+    status: "Drinks",
     price: 4.5
   },
   {
     id: 152,
     name: "Remy Martin V.S.O.P.",
-    status: "pos",
+    status: "Drinks",
     price: 4.5
   },
   {
     id: 153,
     name: "Metaxa ****",
-    status: "pos",
+    status: "Drinks",
     price: 3.5
   },
   {
     id: 154,
     name: "Calvados Papidoux",
-    status: "pos",
+    status: "Drinks",
     price: 2.9
   },
   {
     id: 155,
     name: "Olmeca Tequila Blanco",
-    status: "pos",
+    status: "Drinks",
     price: 2.5
   },
   {
     id: 156,
-    name: "Olmeca Tequila Reposado",
-    status: "pos",
+    name: "Olmeca Tequila ReDrinksado",
+    status: "Drinks",
     price: 2.5
   },
   {
     id: 157,
     name: "Sierra Tequila Silver",
-    status: "pos",
+    status: "Drinks",
     price: 2.2
   },
   {
     id: 158,
-    name: "Sierra Tequila Reposado",
-    status: "pos",
+    name: "Sierra Tequila ReDrinksado",
+    status: "Drinks",
     price: 2.2
   },
   {
     id: 159,
     name: "Sierra Tequila Antiguo",
-    status: "pos",
+    status: "Drinks",
     price: 3.5
   },
   {
     id: 160,
     name: "Sierra Tequila Plata",
-    status: "pos",
+    status: "Drinks",
     price: 3.5
   },
   {
     id: 161,
     name: "Sierra Tequila Milinario Extra Añejo",
-    status: "pos",
+    status: "Drinks",
     price: 5.0
   },
   {
     id: 162,
     name: "EL Jimador Blanco",
-    status: "pos",
+    status: "Drinks",
     price: 2.5
   },
   {
     id: 163,
-    name: "EL Jimador Reposado",
-    status: "pos",
+    name: "EL Jimador ReDrinksado",
+    status: "Drinks",
     price: 2.5
   },
   {
     id: 164,
     name: "Fürst Bismarck",
-    status: "pos",
+    status: "Drinks",
     price: 2.2
   },
   {
     id: 165,
     name: "Grappa",
-    status: "pos",
+    status: "Drinks",
     price: 1.8
   },
   {
     id: 166,
     name: "Williamsbirne",
-    status: "pos",
+    status: "Drinks",
     price: 1.8
   },
   {
     id: 167,
     name: "Whiskey Johnnie Walker Red",
-    status: "pos",
+    status: "Drinks",
     price: 2.5
   },
   {
     id: 168,
     name: "Johnnie Walker black",
-    status: "pos",
+    status: "Drinks",
     price: 3.5
   },
   {
     id: 169,
     name: "Ballanties",
-    status: "pos",
+    status: "Drinks",
     price: 2.5
   },
   {
     id: 170,
     name: "The Glenlivet",
-    status: "pos",
+    status: "Drinks",
     price: 3.8
   },
   {
     id: 171,
     name: "Chivas Regal",
-    status: "pos",
+    status: "Drinks",
     price: 3.8
   },
   {
     id: 172,
     name: "jim Beam",
-    status: "pos",
+    status: "Drinks",
     price: 2.5
   },
   {
     id: 173,
     name: "jack Danniels",
-    status: "pos",
+    status: "Drinks",
     price: 3.5
   },
   {
     id: 174,
     name: "James Irisch Wishkey",
-    status: "pos",
+    status: "Drinks",
     price: 2.5
   },
   {
     id: 175,
     name: "Jack Danniel Honey",
-    status: "pos",
+    status: "Drinks",
     price: 3.8
   },
   {
     id: 176,
     name: "Vodka Absolute Vodka",
-    status: "pos",
+    status: "Drinks",
     price: 2.5
   },
   {
     id: 178,
     name: "Vodka Gorbatschow",
-    status: "pos",
+    status: "Drinks",
     price: 2.2
   },
   {
     id: 179,
     name: "Parliment Vodka",
-    status: "pos",
+    status: "Drinks",
     price: 2.2
   },
   {
     id: 180,
     name: "Finlandia",
-    status: "pos",
+    status: "Drinks",
     price: 2.5
   },
   {
     id: 181,
     name: "Long Barcadi Cola",
-    status: "pos",
+    status: "Drinks",
     price: 6.9
   },
   {
     id: 182,
     name: "Gin Tonic",
-    status: "pos",
+    status: "Drinks",
     price: 6.9
   },
   {
     id: 183,
     name: "Vodka Lemon",
-    status: "pos",
+    status: "Drinks",
     price: 6.9
   },
   {
@@ -1234,307 +1234,307 @@ export const ItemList = [
   {
     id: 306,
     name: "Espresso",
-    status: "Getränke-Hot pos",
+    status: "Getränke-Hot Drinks",
     price: 1.9
   },
   {
     id: 307,
     name: "Espresso Macchiato",
-    status: "Getränke-Hot pos",
+    status: "Getränke-Hot Drinks",
     price: 2.5
   },
   {
     id: 307,
     name: "doppelter Espresso",
-    status: "Getränke-Hot pos",
+    status: "Getränke-Hot Drinks",
     price: 3.2
   },
   {
     id: 308,
     name: "Café Crème",
-    status: "Getränke-Hot pos",
+    status: "Getränke-Hot Drinks",
     price: 2.5
   },
   {
     id: 309,
     name: "Milchkaffee",
-    status: "Getränke-Hot pos",
+    status: "Getränke-Hot Drinks",
     price: 3.2
   },
   {
     id: 310,
     name: "Cappuccino",
-    status: "Getränke-Hot pos",
+    status: "Getränke-Hot Drinks",
     price: 2.9
   },
   {
     id: 311,
     name: "Amaretto Cappuccino",
-    status: "Getränke-Hot pos",
+    status: "Getränke-Hot Drinks",
     price: 3.9
   },
   {
     id: 312,
     name: "Bailays Cappuccino",
-    status: "Getränke-Hot pos",
+    status: "Getränke-Hot Drinks",
     price: 3.9
   },
   {
     id: 313,
     name: "Latte Macchiato",
-    status: "Getränke-Hot pos",
+    status: "Getränke-Hot Drinks",
     price: 3.2
   },
   {
     id: 314,
     name: "Mexican Kaffee",
-    status: "Getränke-Hot pos",
+    status: "Getränke-Hot Drinks",
     price: 4.9
   },
   {
     id: 315,
     name: "BIO FRÜCHTE NATUR",
-    status: "Getränke-Hot pos",
+    status: "Getränke-Hot Drinks",
     price: 2.9
   },
   {
     id: 316,
     name: "BIO GRÜNTEE JASMIN Blatt",
-    status: "Getränke-Hot pos",
+    status: "Getränke-Hot Drinks",
     price: 2.9
   },
   {
     id: 317,
     name: "English Select Ceylon Orange PEKOE blatt",
-    status: "Getränke-Hot pos",
+    status: "Getränke-Hot Drinks",
     price: 2.9
   },
   {
     id: 318,
     name: "PFEFFERMINZBLÄTTER",
-    status: "Getränke-Hot pos",
+    status: "Getränke-Hot Drinks",
     price: 2.9
   },
   {
     id: 319,
     name: "KAMILLENBLÜTEN",
-    status: "Getränke-Hot pos",
+    status: "Getränke-Hot Drinks",
     price: 2.9
   },
   {
     id: 320,
     name: "Chai Latte Classic",
-    status: "Getränke-Hot pos",
+    status: "Getränke-Hot Drinks",
     price: 3.9
   },
   {
     id: 321,
     name: "Schoko Chai Latte",
-    status: "Getränke-Hot pos",
+    status: "Getränke-Hot Drinks",
     price: 3.9
   },
   {
     id: 322,
     name: "Glühwein",
-    status: "Getränke-Hot pos",
+    status: "Getränke-Hot Drinks",
     price: 2.9
   },
   {
     id: 323,
     name: "Grog",
-    status: "Getränke-Hot pos",
+    status: "Getränke-Hot Drinks",
     price: 3.5
   },
   {
     id: 324,
     name: "Barcadi & Cola",
-    status: "Long pos",
+    status: "Long Drinks",
     price: 6.9
   },
   {
     id: 325,
     name: "Gin-Tonic³",
-    status: "Long pos",
+    status: "Long Drinks",
     price: 6.9
   },
   {
     id: 326,
     name: "Whisky-Cola",
-    status: "Long pos",
+    status: "Long Drinks",
     price: 6.9
   },
   {
     id: 327,
     name: "Wodka-Lemon",
-    status: "Long pos",
+    status: "Long Drinks",
     price: 6.9
   },
   {
     id: 328,
     name: "Southern-Ginger",
-    status: "Long pos",
+    status: "Long Drinks",
     price: 6.9
   },
   {
     id: 329,
     name: "Batida-Kirsch",
-    status: "Long pos",
+    status: "Long Drinks",
     price: 6.9
   },
   {
     id: 330,
     name: "Cuba Libre",
-    status: "Long pos",
+    status: "Long Drinks",
     price: 6.9
   },
   {
     id: 331,
     name: "Campari",
-    status: "Long pos",
+    status: "Long Drinks",
     price: 6.9
   },
   {
     id: 332,
     name: "Red Bull-Wodka",
-    status: "Long pos",
+    status: "Long Drinks",
     price: 6.9
   },
   {
     id: 333,
     name: "Red Bull-Prosecco",
-    status: "Long pos",
+    status: "Long Drinks",
     price: 6.9
   },
   {
     id: 334,
     name: "Red Bull-Campari",
-    status: "Long pos",
+    status: "Long Drinks",
     price: 6.9
   },
   {
     id: 335,
     name: "Sierra Tequila Silver Palomo",
-    status: "Long pos",
+    status: "Long Drinks",
     price: 6.9
   },
   {
     id: 336,
     name: "Henkell Trocken Piccolo(Fl. 0.2l)",
-    status: "Long pos",
+    status: "Long Drinks",
     price: 4.5
   },
   {
     id: 337,
     name: "Henkell Trocken(Fl. 0.75l)",
-    status: "Long pos",
+    status: "Long Drinks",
     price: 18.0
   },
   {
     id: 338,
     name: "Concha y Toro(CHILENISCH)-Fl. 0.75l",
-    status: "Long pos",
+    status: "Long Drinks",
     price: 14.9
   },
   {
     id: 339,
     name: "Concha y Toro(CHILENISCH)Blance-Fl. 0.75l",
-    status: "Long pos",
+    status: "Long Drinks",
     price: 14.9
   },
   {
     id: 340,
     name: "L.A. Cetto rot(MEXIKANISCH)-Fl. 0.75l",
-    status: "Long pos",
+    status: "Long Drinks",
     price: 15.9
   },
   {
     id: 341,
     name: "L.A. Cetto weiß(MEXIKANISCH)-Fl. 0.75l",
-    status: "Long pos",
+    status: "Long Drinks",
     price: 15.9
   },
   {
     id: 342,
     name: "Concha y Toro(Offene Weine)-0.2l",
-    status: "Long pos",
+    status: "Long Drinks",
     price: 3.9
   },
   {
     id: 343,
     name: "Concha y Toro(Offene Weine)-0.5l",
-    status: "Long pos",
+    status: "Long Drinks",
     price: 7.9
   },
   {
     id: 344,
     name: "Concha y Toro(Sauvignon Blanc)-0.2l",
-    status: "Long pos",
+    status: "Long Drinks",
     price: 3.9
   },
   {
     id: 345,
     name: "Concha y Toro(Sauvignon Blanc)-0.5l",
-    status: "Long pos",
+    status: "Long Drinks",
     price: 7.9
   },
   {
     id: 346,
     name: "Concha y Toro Rosé -0.2l",
-    status: "Long pos",
+    status: "Long Drinks",
     price: 3.9
   },
   {
     id: 347,
     name: "Concha y Toro Rosé-0.5l",
-    status: "Long pos",
+    status: "Long Drinks",
     price: 7.9
   },
   {
     id: 348,
     name: "Dunviro Rioja(Spanischer Rotwein)-0.2l",
-    status: "Long pos",
+    status: "Long Drinks",
     price: 3.9
   },
   {
     id: 349,
     name: "Dunviro Rioja(Spanischer Rotwein)-0.5l",
-    status: "Long pos",
+    status: "Long Drinks",
     price: 7.9
   },
   {
     id: 350,
     name: "Dunviro Rioja(Spanischer Weißwein trocken)-0.2l",
-    status: "Long pos",
+    status: "Long Drinks",
     price: 3.9
   },
   {
     id: 351,
     name: "Dunviro Rioja(Spanischer Weißwein trocken)-0.5l",
-    status: "Long pos",
+    status: "Long Drinks",
     price: 7.9
   },
   {
     id: 352,
     name: "Lambrusco(Italienischer Perlwein,mild und süß)-0.2l",
-    status: "Long pos",
+    status: "Long Drinks",
     price: 3.5
   },
   {
     id: 353,
     name: "Lambrusco(Italienischer Perlwein,mild und süß)-0.5l",
-    status: "Long pos",
+    status: "Long Drinks",
     price: 7.9
   },
   {
     id: 354,
     name: "Sangria(Weinhaltiges Getränk mit Früchten)-0.2l",
-    status: "Long pos",
+    status: "Long Drinks",
     price: 3.5
   },
   {
     id: 355,
     name: "Weinschorle(Weinhaltiges Getränk)-0.2l",
-    status: "Long pos",
+    status: "Long Drinks",
     price: 3.5
   }
 ];
