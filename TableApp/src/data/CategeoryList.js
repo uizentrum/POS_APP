@@ -1,74 +1,74 @@
 export const CategoriesList = [
   {
-    status: "Aperitif",
+    Category: "Aperitif",
     imageUrl: "images/maincourse.jpg"
   },
   {
-    status: "MainCourse",
+    Category: "MainCourse",
     imageUrl: "images/maincourse.jpg"
   },
   {
-    status: "Apetizer",
+    Category: "Apetizer",
     imageUrl: "images/appetizer.jpg"
   },
   {
-    status: "Drinks",
+    Category: "Drinks",
     imageUrl: "images/drinks.jpg"
   },
   {
-    status: "Salad",
+    Category: "Salad",
     imageUrl: "images/salad.jpg"
   },
   {
-    status: "Vorspeisen",
+    Category: "Vorspeisen",
     imageUrl: "images/Vorspeisen.jpg"
   },
   {
-    status: "Hauptegricht Steaks",
+    Category: "Hauptegricht Steaks",
     imageUrl: "images/Hüftsteak.jpg"
   },
   {
-    status: "Acompanamientos Beilagen & Saucen",
+    Category: "Acompanamientos Beilagen & Saucen",
     imageUrl: "images/Pfifferlingsauce.jpg"
   },
   {
-    status: "Arriba- Spezialitäten",
+    Category: "Arriba- Spezialitäten",
     imageUrl: "images/Pechugass.jpg"
   },
   {
-    status: "Faitajs",
+    Category: "Faitajs",
     imageUrl: "images/Faitajs.jpg"
   },
   {
-    status: "Spezial Burger (125g.)",
+    Category: "Spezial Burger (125g.)",
     imageUrl: "images/specialburger.jpg"
   },
   {
-    status: "Gigant Burger (227g.)",
+    Category: "Gigant Burger (227g.)",
     imageUrl: "images/gigantburger.jpg"
   },
   {
-    status: "Pasta",
+    Category: "Pasta",
     imageUrl: "images/pasta.jpg"
   },
   {
-    status: "Pescado-Fischgerichte",
+    Category: "Pescado-Fischgerichte",
     imageUrl: "images/fish.jpg"
   },
   {
-    status: "Kinder-Menü",
+    Category: "Kinder-Menü",
     imageUrl: "images/kinder.jpg"
   },
   {
-    status: "Für den kleinen Hunger",
+    Category: "Für den kleinen Hunger",
     imageUrl: "images/steak.jpg"
   },
   {
-    status: "Getränke-Hot Drinks",
+    Category: "Getränke-Hot Drinks",
     imageUrl: "images/hotdrinks.jpg"
   },
   {
-    status: "Long Drinks",
+    Category: "Long Drinks",
     imageUrl: "images/longdrink.jpg"
   }
 ];
