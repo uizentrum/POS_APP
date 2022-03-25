@@ -38,7 +38,6 @@ class SectionTile extends StatelessWidget {
             Navigator.pushNamed(context, "/");
           },
           child: Container(
-            color: Colors.blueGrey,
             padding: EdgeInsets.all(10),
             child: Icon(Icons.arrow_right),
           ),
