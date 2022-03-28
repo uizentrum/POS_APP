@@ -1,0 +1,4 @@
+#Sun Mar 27 18:40:45 NPT 2022
+base.0=/Volumes/WorkSpace/2022Repo/TableApp/android/app/build/intermediates/dex/release/mergeDexRelease/classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
